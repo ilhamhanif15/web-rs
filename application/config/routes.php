@@ -61,5 +61,5 @@ $route['list'] = 'EndUser_Controller/list';
 
 
 /*------------ROUTE ADMIN-------------------------------------*/
-
+$route['admin/dashboard'] = 'Admin_Controller/index';
 /*------------------------------------------------------------*/
