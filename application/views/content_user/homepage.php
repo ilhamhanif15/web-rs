@@ -1,137 +1,203 @@
-<div class="container" style="margin-top: 30px;">
-	  <div class="row">
-	  	<div class="col-md-12 col-sm-12">
-	  		<h1 style="border-bottom-style: solid;">Rundown Acara</h1>
-	  		<p style="text-align: justify;">
-	  			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		  		<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	  		</p>
-	  		<table class="table table-dark">
-			  <thead>
-			    <tr>
-			      <th scope="col">Waktu</th>
-			      <th scope="col">Kegiatan</th>
-			      <th scope="col">Keterangan</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <td>12:00 - 13:00</td>
-			      <td>Makan Siang</td>
-			      <td> - </td>
-			    </tr>
-			    <tr>
-			      <td>12:00 - 13:00</td>
-			      <td>Makan Siang</td>
-			      <td> - </td>
-			    </tr>
-			    <tr>
-			      <td>12:00 - 13:00</td>
-			      <td>Makan Siang</td>
-			      <td> - </td>
-			    </tr>
-			  </tbody>
-			</table>
-	  		<br/>
-	  		<p style="text-align: justify;">
-	  			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	  		</p>
-	  	</div>
-	  	<div class="col-md-12">
-	  		<hr/>
-	  		<h1 style="border-bottom-style: solid;">
-	  			Dokumentasi<span style="font-size: medium" class="">(<a href="#">Lihat Lebih Lengkap</a>)</span>
-	  		</h1>
-	  		<!-- <div class="d-flex justify-content-center">
-		  		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%; height: 50%">
-				  <ol class="carousel-indicators">
-				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				  </ol>
-				  <div class="carousel-inner">
-				    <div class="carousel-item active">
-				      <center>
-				      	<img class="img-fluid d-block thumb" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg" alt="First slide">
-				      </center>
-				    </div>
-				    <div class="carousel-item">
-				      <center>
-				      	<img class="img-fluid d-block thumb" src="<?php echo base_url().'assets/photo/bg1.jpg' ?>" alt="Second slide">
-				      </center>
-				    </div>
-				    <div class="carousel-item">
-				      <center>
-				      	<img class="img-fluid d-block thumb" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg" alt="Third  slide">
-				      </center>
-				    </div>
-				  </div>
-				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				    <span class="fa fa-caret-left" style="color: black;font-size: 60px;" aria-hidden="true"></span>
-				    <span class="sr-only">Previous</span>
-				  </a>
-				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				    <span class="fa fa-caret-right" style="color: black;font-size: 60px;" aria-hidden="true"></span>
-				    <span class="sr-only">Next</span>
-				  </a>
-				</div>
-			</div> -->
+<!-- CONTENT -->
+<div id="ubea-hero" class="js-fullheight"  data-section="home">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/img_bg_1.jpg);">
+	   		<div class="overlay"></div>
+	   		<div class="container">
+	   		</div>
+	   	</li>
+	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/img_bg_2.jpg);">
+	   		<div class="overlay"></div>
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   			</div>
+	   		</div>
+	   	</li>
+	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/img_bg_3.png);">
+	   		<div class="overlay"></div>
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   			</div>
+	   		</div>
+	   	</li>
+	  	</ul>
+  	</div>
+</div>
+
+<div class="ubea-section-overflow">
+	<div class="ubea-section" id="ubea-portfolio" data-section="Dokumentasi">
+		<div class="ubea-container">
 			<div class="row">
-				<div class="col-md-3">
-					<center>
-						<a href="#" class="pop">
-						    <img class="thumb" src="<?php echo base_url().'assets/photo/bg1.jpg' ?>">
-						</a>
-					</center>
+				<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+					<h2>Dokumentasi</h2>
+					<p>Foto seminar 2019</p>
 				</div>
-				<div class="col-md-3">
-					<center>
-						<a href="#" class="pop">
-						    <img class="thumb" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg">
-						</a>
-					</center>		
-				</div>
-				<div class="col-md-3">
-					<center>
-						<a href="#" class="pop">
-						    <img class="thumb" src="<?php echo base_url().'assets/photo/bg1.jpg' ?>">
-						</a>
-					</center>
-				</div>
-				<div class="col-md-3">
-					<center>
-						<a href="#" class="pop">
-						    <img class="thumb" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg">
-						</a>
-					</center>		
-				</div>
-				
 			</div>
-			<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-dialog">
-			    <div class="modal-content">              
-			      <div class="modal-body">
-			      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			        <img src="" class="imagepreview" style="width: 100%;" >
-			      </div>
-			    </div>
-			  </div>
+			<div class="row">
+				<div class="col-md-4">
+					<a href="images/img_2.jpg" class="ubea-card-item image-popup" title="keterangan 1">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url() ?>assets/images/img_2.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="images/img_1.jpg" class="ubea-card-item image-popup" title="keterangan 2">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url() ?>assets/images/img_1.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="images/img_3.jpg" class="ubea-card-item image-popup" title="keterangan 3">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url() ?>assets/images/img_3.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+				</div>
+
+				<div class="col-md-4">
+					<a href="images/img_4.jpg" class="ubea-card-item image-popup" title="Keterangan 4">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url() ?>assets/images/img_4.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="images/img_5.jpg" class="ubea-card-item image-popup" title="Keterangan 5">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url() ?>assets/images/img_5.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="images/img_6.jpg" class="ubea-card-item image-popup" title="Keterangan 6">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url() ?>assets/images/img_6.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+				</div>
 			</div>
-	  	</div>
-	  </div>
+		</div>
 	</div>
+    
+	<div class="ubea-section" id="ubea-faq" data-section="InfoHotel">
+		<div class="ubea-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+					<h2>Informasi Hotel</h2>
+					<p>Informasi Hotel Sekitar Bandung</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="ubea-accordion">
+						<div class="ubea-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Jalan Buah batu</h3>
+						</div>
+						<div class="ubea-accordion-content">
+							<div class="inner">
+								<p>Nama Hotel : wik wik</p>
+							</div>
+						</div>
+					</div>
+					<div class="ubea-accordion">
+						<div class="ubea-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Jalan Banjaran</h3>
+						</div>
+						<div class="ubea-accordion-content">
+							<div class="inner">
+								<p>Nama hotel : wik wik</p>
+							</div>
+						</div>
+					</div>
+					<div class="ubea-accordion">
+						<div class="ubea-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Jalan Baleendah</h3>
+						</div>
+						<div class="ubea-accordion-content">
+							<div class="inner">
+								<p>Nama hotel : rumah hanif</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+
+					<div class="ubea-accordion">
+						<div class="ubea-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Jalan Terusan Buah Batu</h3>
+						</div>
+						<div class="ubea-accordion-content">
+							<div class="inner">
+								<p>Nama hotel : telkom</p>
+							</div>
+						</div>
+					</div>
+					<div class="ubea-accordion">
+						<div class="ubea-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Jalan Burangrang</h3>
+						</div>
+						<div class="ubea-accordion-content">
+							<div class="inner">
+								<p>Nama Hotel : horizon </p>
+							</div>
+						</div>
+					</div>
+					<div class="ubea-accordion">
+						<div class="ubea-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Jalan Sukapura</h3>
+						</div>
+						<div class="ubea-accordion-content">
+							<div class="inner">
+								<p>Nama hotel : wik wik</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ubea-blog" data-section="about">
+	<div class="ubea-container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+				<h2>Kontak Kami</h2>
+				<p>Kami melayani anda semaksimal mungkin</p>
+			</div>
+		</div>
+    </div>
+</div>
+  
+<div id="ubea-contact" data-section="contact" class="ubea-cover ubea-cover-xs" style="background-image:url(<?php echo base_url() ?>assets/images/img_bg_2.jpg);">
+	<div class="overlay"></div>
+	<div class="ubea-container">
+		<div class="row text-center">
+			<div class="display-t">
+				<div class="display-tc">
+					<div class="col-md-12">
+						<h3>Jika terjadi kekeliruan data silahkan hubungi kami <a href="#">info@hisfarsijabar.com</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

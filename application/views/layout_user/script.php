@@ -1,23 +1,25 @@
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="<?php echo parse_url(base_url().'assets/bootstrap4/js/bootstrap.min.js', PHP_URL_PATH) ?>"></script>
-<!-- <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script> -->
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-<script type="text/javascript">
-	$('.pop').on('click', function(e) {
-		e.preventDefault();
-		$('.imagepreview').attr('src', $(this).find('img').attr('src'));
-		$('#imagemodal').modal('show');   
-	});	
+<!-- jQuery -->
+<script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="<?php echo base_url() ?>assets/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="<?php echo base_url() ?>assets/js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="<?php echo base_url() ?>assets/js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="<?php echo base_url() ?>assets/js/jquery.countTo.js"></script>
+<!-- Flexslider -->
+<script src="<?php echo base_url() ?>assets/js/jquery.flexslider-min.js"></script>
+<!-- Magnific Popup -->
+<script src="<?php echo base_url() ?>assets/js/jquery.magnific-popup.min.js"></script>
+<script src="<?php echo base_url() ?>assets/js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="<?php echo base_url() ?>assets/js/main.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 
+<script type="text/javascript">
 	$('#table-data').DataTable();
-	/*$('#table-data').DataTable( {
-        "processing": true,
-        "serverSide": true,
-        "ajax": "<?php echo base_url().'tableProcess/' ?>"
-    } );
-*/
 </script>

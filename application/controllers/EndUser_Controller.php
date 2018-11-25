@@ -15,16 +15,10 @@ class EndUser_Controller extends CI_Controller {
 		$this->load->view('layout_user/master',$data);
 	}
 
-	public function daftarSukses()
-	{
-		$data['content'] = 'daftarSukses';
-		$this->load->view('layout_user/master',$data);
-	}
-
-	public function cekStatusDaftar()
+	public function list()
 	{
 		/*Ada Tabel*/
-		$data['content'] = 'cekStatusDaftar';
+		$data['content'] = 'list';
 		$this->load->view('layout_user/master',$data);
 	}
 

@@ -1,26 +1,21 @@
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top custom-nav bg-light" id="navbar">
-	<span class="container">
-	<button class="navbar-toggler" id="btnToggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav" style="width: 100%">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#" style="font-weight: bolder;">HOME<span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-weight: bolder;">DOKUMENTASI</a>
-	      </li>
-	    </ul>
-	  	<ul class="navbar-nav">
-	    	<li class="nav-item" style="margin: 7px;" >
-	    		<button class="btn btn-success" style="width: 100%;font-weight: bolder;">CEK STATUS DAFTAR</button>
-	    	</li>
-	  		<li class="nav-item" style="margin: 7px;">
-	    		<button class="btn btn-primary" style="width: 100%;font-weight: bolder;">DAFTAR</button>
-	    	</li>
-	  	</ul>
-	  </div>
-	</span>
+<nav class="ubea-nav" role="navigation">
+	<div class="ubea-container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-12">
+				<div id="ubea-logo"><a href="index.html">HisfarSijabar<em>.</em></a></div>
+			</div>
+			<div class="col-xs-10 text-right menu-1 main-nav">
+				<ul>
+					<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+					<li><a href="#" data-nav-section="s">Daftar</a></li>
+					<li><a href="list.html">List Pendaftar</a></li>
+                    <li><a href="#" data-nav-section="">Verifikasi Daftar</a></li>
+					<li><a href="#" data-nav-section="Dokumentasi">Dokumentasi</a></li>
+					<li><a href="#" data-nav-section="InfoHotel">Info Hotel</a></li>
+					<li><a href="" class="">Materi</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
 </nav>

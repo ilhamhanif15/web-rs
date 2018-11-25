@@ -56,8 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 /*--------------ROUTE USER------------------------------------*/
 $route['daftar'] = 'EndUser_Controller/daftar';
-$route['petunjuk_bayar'] = 'EndUser_Controller/daftarSukses';
-$route['cek_status'] = 'EndUser_Controller/cekStatusDaftar';
+$route['list'] = 'EndUser_Controller/list';
 /*------------------------------------------------------------*/
 
 
