@@ -59,3 +59,8 @@ $route['daftar'] = 'EndUser_Controller/daftar';
 $route['petunjuk_bayar'] = 'EndUser_Controller/daftarSukses';
 $route['cek_status'] = 'EndUser_Controller/cekStatusDaftar';
 /*------------------------------------------------------------*/
+
+
+/*------------ROUTE ADMIN-------------------------------------*/
+
+/*------------------------------------------------------------*/

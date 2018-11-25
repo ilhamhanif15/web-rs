@@ -23,8 +23,9 @@ class EndUser_Controller extends CI_Controller {
 
 	public function cekStatusDaftar()
 	{
+		/*Ada Tabel*/
 		$data['content'] = 'cekStatusDaftar';
 		$this->load->view('layout_user/master',$data);
 	}
-	
+
 }
