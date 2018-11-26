@@ -27,10 +27,10 @@
           </a>
         </li>
         <?php } ?>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/pajak' ?>"><i class="fa fa-bank"></i> <span class="menuName">Pajak</span></a></li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/lowonganpekerjaan' ?>"><i class="fa fa-building"></i> <span class="menuName">Lowongan Pekerjaan</span></a></li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/produk' ?>"><i class="fa fa-gift"></i> <span class="menuName">Produk</span></a></li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/aspirasi' ?>"><i class="fa fa-comment"></i> <span class="menuName">Aspirasi</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'master_controller/pajak' ?>"><i class="fa fa-server"></i> <span class="menuName">Registrasi</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'master_controller/lowonganpekerjaan' ?>"><i class="fa fa-money"></i> <span class="menuName">Keuangan</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'master_controller/produk' ?>"><i class="fa fa-folder-open"></i> <span class="menuName">Data Seminar Lama</span></a></li>
+       <!--  <li class="menuList"><a href="<?php echo base_url().'master_controller/aspirasi' ?>"><i class="fa fa-comment"></i> <span class="menuName">Aspirasi</span></a></li>
         <li class="menuList"><a href="<?php echo base_url().'master_controller/pengaduan' ?>"><i class="fa fa-exclamation-triangle"></i> <span class="menuName">Pengaduan</span></a></li>
         <li class="treeview treeLyn menuList">
           <a href="#" class="pullMenu">
@@ -63,7 +63,7 @@
             <li class="menuList2" ><a class="menuName2" href="<?php echo base_url().'master_controller/Layanan/ket_ahli_waris' ?>"><i class="fa fa-file-pdf"></i> Ket. Ahli Waris</a></li>
           </ul>
         </li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/pengaturan' ?>"><i class="fa fa-gears"></i> <span class="menuName">Pengaturan</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'master_controller/pengaturan' ?>"><i class="fa fa-gears"></i> <span class="menuName">Pengaturan</span></a></li> -->
         
       </ul>
     </section>

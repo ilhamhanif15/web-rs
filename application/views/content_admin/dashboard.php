@@ -12,10 +12,10 @@
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-aqua">E</span>
+            <span class="info-box-icon bg-aqua"><i class="fa fa-exclamation"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Aspirasi</span>
+              <span class="info-box-text">Data Belum Lunas</span>
               <span class="info-box-number">12</span>
             </div>
             <!-- /.info-box-content -->
@@ -24,10 +24,10 @@
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-orange">X</span>
+            <span class="info-box-icon bg-orange"><i class="fa fa-check"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Pengaduan</span>
+              <span class="info-box-text">Data Sudah Lunas</span>
               <span class="info-box-number">23</span>
             </div>
             <!-- /.info-box-content -->
@@ -36,10 +36,10 @@
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-green">I</span>
+            <span class="info-box-icon bg-green"><i class="fa fa-info-circle"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Layanan</span>
+              <span class="info-box-text">Data Belum Diverfikasi</span>
               <span class="info-box-number">45</span>
             </div>
             <!-- /.info-box-content -->
@@ -48,10 +48,10 @@
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-red">D</span>
+            <span class="info-box-icon bg-red"><i class="fa fa-file"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Produk</span>
+              <span class="info-box-text">Total Data</span>
               <span class="info-box-number">51</span>
             </div>
             <!-- /.info-box-content -->
