@@ -8,8 +8,9 @@
 			<table id="table-data" class="table table-striped table-bordered" style="width:100%">
 			    <thead>
 			        <tr>
-			            <th>ID</th>
+			            <th>No.Urut</th>
 			            <th>Nama</th>
+			            <th>Alamat</th>
 			            <th>Email</th>
 			            <th>Status</th>
 			        </tr>
@@ -22,6 +23,7 @@
 			        <tr>
 			            <td><?php echo $i ?></td>
 			            <td><?php echo 'Nama '.$i ?></td>
+			            <td><?php echo 'Alamat '.$i ?></td>
 			            <td><?php echo 'Email '.$i ?></td>
 			            <td>Status</td>
 			        </tr>
