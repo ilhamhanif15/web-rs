@@ -4,7 +4,7 @@
 	  		<h1 style="border-bottom-style: solid;">Daftar</h1>
 	  		<form>
 	  			 <div class="form-group">
-                  <label for="exampleFormControlInput1">Role</label>
+                  <label for="exampleFormControlInput1">Jenis Pembayaran</label>
                   
                   <div class="">
                   <select class="form-control" name="role" required="">
