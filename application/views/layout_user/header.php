@@ -1,6 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hisfarsijabar</title>
 
     <!-- Animate.css -->
@@ -10,7 +11,7 @@
     <!-- Themify Icons-->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/themify-icons.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="<?php //echo base_url() ?>assets/css/bootstrap.css"> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/magnific-popup.css">
@@ -28,6 +29,9 @@
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 
     </head>

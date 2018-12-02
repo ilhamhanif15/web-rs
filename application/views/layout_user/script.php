@@ -1,5 +1,6 @@
 <!-- jQuery -->
-<script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+<!-- <script src="<?php //echo base_url() ?>assets/js/jquery.min.js"></script> -->
+<script src="<?php echo base_url().'assets/AdminLTE-2.4.5/' ?>bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="<?php echo base_url() ?>assets/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
