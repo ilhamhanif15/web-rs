@@ -8,9 +8,11 @@
 				</p>
 				<p class="pull-right">
 					<ul class="ubea-social-icons pull-right">
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-instagram"></i></a></li>
-						<li><a href="#"><i class="icon-email"></i></a></li>
+						<li><a href="#"><i class="icon-facebook" style="color: black"></i></a></li>
+						<li><a href="#"><i class="icon-instagram" style="color: black"></i></a></li>
+						<li><a href="#"><i class="icon-email" style="color: black"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin" style="color: black"></i></a></li>
+						<li><a href="#"><i class="icon-twitter" style="color: black"></i></a></li>
 					</ul>
 				</p>
 			</div>

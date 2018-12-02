@@ -36,51 +36,56 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<a href="images/img_2.jpg" class="ubea-card-item image-popup" title="keterangan 1">
+					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 1">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url() ?>assets/images/img_2.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
+							<p>Title</p>
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="images/img_1.jpg" class="ubea-card-item image-popup" title="keterangan 2">
+					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 2">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url() ?>assets/images/img_1.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
+							<p>Title</p>
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="images/img_3.jpg" class="ubea-card-item image-popup" title="keterangan 3">
+					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 3">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url() ?>assets/images/img_3.jpg" alt="Image" class="img-responsive">
-						</figure>
-					</a>
-				</div>
-
-				<div class="col-md-4">
-					<a href="images/img_4.jpg" class="ubea-card-item image-popup" title="Keterangan 4">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url() ?>assets/images/img_4.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
+							<p>Title</p>
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="images/img_5.jpg" class="ubea-card-item image-popup" title="Keterangan 5">
+					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 4">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url() ?>assets/images/img_5.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
+							<p>Title</p>
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="images/img_6.jpg" class="ubea-card-item image-popup" title="Keterangan 6">
+					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 5">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url() ?>assets/images/img_6.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
+							<p>Title</p>
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 6">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
+							<p>Title</p>
 						</figure>
 					</a>
 				</div>
@@ -106,7 +111,29 @@
 						</div>
 						<div class="ubea-accordion-content">
 							<div class="inner">
-								<p>Nama Hotel : wik wik</p>
+								<ul>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -128,7 +155,29 @@
 						</div>
 						<div class="ubea-accordion-content">
 							<div class="inner">
-								<p>Nama hotel : rumah hanif</p>
+								<ul>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -143,7 +192,29 @@
 						</div>
 						<div class="ubea-accordion-content">
 							<div class="inner">
-								<p>Nama hotel : telkom</p>
+								<ul>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -154,7 +225,29 @@
 						</div>
 						<div class="ubea-accordion-content">
 							<div class="inner">
-								<p>Nama Hotel : horizon </p>
+								<ul>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -165,7 +258,29 @@
 						</div>
 						<div class="ubea-accordion-content">
 							<div class="inner">
-								<p>Nama hotel : wik wik</p>
+								<ul>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>

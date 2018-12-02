@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 30px;">
+<div class="container" style="margin-top: 100px;">
 	<div class="row">
 		<div class="col-md-12">
 			<h1 style="border-bottom-style: solid;">List</h1>
@@ -13,6 +13,7 @@
 			            <th>Alamat</th>
 			            <th>Email</th>
 			            <th>Status</th>
+			            <th>Aksi</th>
 			        </tr>
 			    </thead>
 			    <tbody>
@@ -26,6 +27,15 @@
 			            <td><?php echo 'Alamat '.$i ?></td>
 			            <td><?php echo 'Email '.$i ?></td>
 			            <td>Status</td>
+			            <td>
+			            	<center>
+			            	<a href="<?php echo base_url().'verifikasi'?>">
+                				<button type="button" class="btn btn-success">
+         							 <span class="glyphicon glyphicon-ok"></span> Verifikasi
+        						</button>
+                			</a>
+                			</center>
+                		</td>
 			        </tr>
 			        <?php } ?>
 
