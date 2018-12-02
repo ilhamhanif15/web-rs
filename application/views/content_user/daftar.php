@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 30px;">
+<div class="container" style="margin-top: 100px;">
 	  <div class="row">
 	  	<div class="col-md-6 offset-md-3 col-sm-12">
 	  		<h1 style="border-bottom-style: solid;">Daftar</h1>

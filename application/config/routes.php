@@ -55,11 +55,15 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 /*--------------ROUTE USER------------------------------------*/
-$route['daftar'] = 'EndUser_Controller/daftar';
+$route['homepage'] ='EndUser_Controller/homepage';
+$route ['daftar'] = 'EndUser_Controller/daftar';
 $route['list'] = 'EndUser_Controller/list';
+$route['verifikasi'] = 'EndUser_Controller/verifikasi';
+$route['materi'] = 'EndUser_Controller/materi';
 /*------------------------------------------------------------*/
 
 
 /*------------ROUTE ADMIN-------------------------------------*/
 $route['admin/dashboard'] = 'Admin_Controller/index';
+$route['registrasi'] = 'Admin_Controller/registrasi';
 /*------------------------------------------------------------*/
