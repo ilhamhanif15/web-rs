@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 100px;">
+<div class="container">
 	  <div class="row">
 	  	<div class="col-md-4 col-sm-4 col-xs-12" >
                         <div class="alert alert-info text-center" style="margin-top: 10px">

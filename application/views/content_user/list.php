@@ -1,11 +1,11 @@
-<div class="container" style="margin-top: 100px;">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<h1 style="border-bottom-style: solid;">List</h1>
 	  		<div class="alert alert-info">
 			  <strong>Info!</strong> Indicates a neutral informative change or action.
 			</div>
-			<table id="table-data" class="table table-striped table-bordered" style="width:100%">
+			<table id="table-data" class="table table-striped table-bordered" style="width: 100%">
 			    <thead>
 			        <tr>
 			            <th>No.Urut</th>

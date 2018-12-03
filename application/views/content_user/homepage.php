@@ -1,5 +1,5 @@
 <!-- CONTENT -->
-<div id="ubea-hero" class="js-fullheight"  data-section="home">
+<div id="ubea-hero" class="js-fullheight"  data-section="home" style="padding-top: 82px;">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
 	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/img_bg_1.jpg);">

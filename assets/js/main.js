@@ -375,10 +375,10 @@
 	
 	$(function(){
 		fullHeight();
-		mobileMenuOutsideClick();
+		//mobileMenuOutsideClick();
 		header();
 		navigation();
-		offcanvasMenu();
+		//offcanvasMenu();
 		burgerMenu();
 		navigationSection();
 		contentWayPoint();
