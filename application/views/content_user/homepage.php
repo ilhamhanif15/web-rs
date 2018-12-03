@@ -93,7 +93,7 @@
 		</div>
 	</div>
     
-	<div class="ubea-section" id="ubea-faq" data-section="InfoHotel">
+	<div class="ubea-section" id="ubea-faq" data-section="InfoHotel" style="padding-top: 6em;padding-bottom: 6em;">
 		<div class="ubea-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center ubea-heading">

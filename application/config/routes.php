@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 /*--------------ROUTE USER------------------------------------*/
 $route['homepage'] ='EndUser_Controller/homepage';
+$route['homepage/(:any)'] ='EndUser_Controller/homepage/$1';
 $route ['daftar'] = 'EndUser_Controller/daftar';
 $route['list'] = 'EndUser_Controller/list';
 $route['verifikasi'] = 'EndUser_Controller/verifikasi';

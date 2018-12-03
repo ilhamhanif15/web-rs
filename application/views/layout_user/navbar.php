@@ -76,11 +76,20 @@
         <li>
         	<a class="nav-link" href="<?php echo base_url().'verifikasi'?>">Verifikasi Daftar</a>
         </li>
+        <?php
+        	if($content == 'homepage'){
+        		$linkNavDok = "#";
+        		$linkNavHotel = '#';
+        	}else{
+        		$linkNavDok = 'homepage/Dokumentasi';
+        		$linkNavHotel = 'homepage/InfoHotel';
+        	}
+        ?>
         <li>
-			<a class="nav-link" href="<?php echo base_url().'homepage' ?>" data-nav-section="Dokumentasi">Dokumentasi</a>
+			<a class="nav-link" href="<?php echo base_url().$linkNavDok ?>" data-nav-section="Dokumentasi">Dokumentasi</a>
 		</li>
 		<li>
-			<a class="nav-link" href="<?php echo base_url().'homepage' ?>" data-nav-section="InfoHotel">Info Hotel</a>
+			<a class="nav-link" href="<?php echo base_url().$linkNavHotel ?>" data-nav-section="InfoHotel">Info Hotel</a>
 		</li>
 		<li>
 			<a class="nav-link" href="<?php echo base_url().'materi' ?>">Materi</a>

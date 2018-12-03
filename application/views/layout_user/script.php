@@ -28,4 +28,24 @@
 	$('#table-data').DataTable({
 		responsive: true
 	});
+
+	<?php if($content == 'homepage'){ ?>
+		$('.nav-link').click(function(e){
+			if($(this).data('nav-section')){
+				e.preventDefault();
+				var current = $(this).data('nav-section');
+				var dataNav = $(document).find("[data-section='" + current + "']");
+				$([document.documentElement, document.body]).animate({
+			        scrollTop: dataNav.offset().top
+			    }, 1000);
+			}
+		});
+		var cur = '<?php echo $navSection ?>';
+		var dataNav = $(document).find("[data-section='" + cur + "']");
+		if(dataNav.length != 0){
+			$([document.documentElement, document.body]).animate({
+		        scrollTop: dataNav.offset().top
+		    }, 1000);
+		}
+	<?php } ?>
 </script>

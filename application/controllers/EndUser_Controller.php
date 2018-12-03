@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class EndUser_Controller extends CI_Controller {
 
-	public function homepage()
+	public function homepage($navSection = NULL)
 	{
 		$data['content'] = 'homepage';
+		$data['navSection'] = $navSection;
 		$this->load->view('layout_user/master',$data);
 	}
 	
