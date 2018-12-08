@@ -316,3 +316,9 @@
 		</div>
 	</div>
 </div>
+
+<div>
+	<a href="<?php echo base_url().'daftar' ?>">
+		<button class="btn btn-primary btn-lg" style="position: fixed;right: 10px;bottom: 17px;z-index: 999">DAFTAR SEKARANG!!!</button>
+	</a>
+</div>

@@ -21,6 +21,13 @@
 	</div>
 </footer>
 
-<div class="gototop js-top">
+<?php 
+	if($content == 'homepage'){ 
+		$bottom = '92px';
+	}else{
+		$bottom = '20px';
+	}
+?>
+<div class="gototop js-top" style="bottom: <?php echo $bottom ?>;right: 14px;">
 	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 </div>

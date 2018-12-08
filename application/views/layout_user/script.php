@@ -35,6 +35,9 @@
 				e.preventDefault();
 				var current = $(this).data('nav-section');
 				var dataNav = $(document).find("[data-section='" + current + "']");
+				if($('.navbar-toggle').css('display') != 'none'){
+					$('.navbar-toggle').click();
+				}
 				$([document.documentElement, document.body]).animate({
 			        scrollTop: dataNav.offset().top
 			    }, 1000);
@@ -43,6 +46,9 @@
 		var cur = '<?php echo $navSection ?>';
 		var dataNav = $(document).find("[data-section='" + cur + "']");
 		if(dataNav.length != 0){
+			if($('.navbar-toggle').css('display') != 'none'){
+				$('.navbar-toggle').click();
+			}
 			$([document.documentElement, document.body]).animate({
 		        scrollTop: dataNav.offset().top
 		    }, 1000);

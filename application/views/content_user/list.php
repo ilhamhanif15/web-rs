@@ -19,7 +19,8 @@
 			    <tbody>
 
 			    	<?php
-			    		for ($i=0; $i < 350; $i++) { 
+			    		for ($i=0; $i < 350; $i++) {
+			    		/*foreach($rest->result() as $c)  {*/
 			    	?>
 			        <tr>
 			            <td><?php echo $i ?></td>

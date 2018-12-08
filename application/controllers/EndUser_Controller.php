@@ -16,10 +16,27 @@ class EndUser_Controller extends CI_Controller {
 		$this->load->view('layout_user/master',$data);
 	}
 
+	public function proses_daftar()
+	{
+		$nama = $this->input->post('nama');
+		$alamat = $this->input->post('nama');
+		$email = $this->input->post('nama');
+		$dataInput = [
+			'nama' => $nama,
+			'alamat' => $alamat,
+			'email' => $email
+		];
+		$this->model_daftar->insert($dataInput);
+	}
+
 	public function list()
 	{
 		/*Ada Tabel*/
 		$data['content'] = 'list';
+		/*$data['tittle'] = 'List';*/
+		/*Proses ambil database*/
+		$res = $this->model_listDaftar->get();
+		$data['rest'] = $res;
 		$this->load->view('layout_user/master',$data);
 	}
 

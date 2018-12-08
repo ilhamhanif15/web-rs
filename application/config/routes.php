@@ -61,10 +61,15 @@ $route ['daftar'] = 'EndUser_Controller/daftar';
 $route['list'] = 'EndUser_Controller/list';
 $route['verifikasi'] = 'EndUser_Controller/verifikasi';
 $route['materi'] = 'EndUser_Controller/materi';
+$route['proses_daftar'] = 'EndUser_Controller/proses_daftar';
 /*------------------------------------------------------------*/
 
 
 /*------------ROUTE ADMIN-------------------------------------*/
 $route['admin/dashboard'] = 'Admin_Controller/index';
+$route['admin'] = 'Login_Controller/index';
+$route['admin/login'] = 'Login_Controller/index';
+$route['admin/auth'] = 'Login_Controller/auth';
+$route['admin/logout'] = 'Login_Controller/logout';
 $route['registrasi'] = 'Admin_Controller/registrasi';
 /*------------------------------------------------------------*/
