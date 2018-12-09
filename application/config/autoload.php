@@ -134,5 +134,6 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array(
 	'additional',
-	'model_user'
+	'model_user',
+	'model_registrasi'
 );

@@ -57,11 +57,16 @@ $route['translate_uri_dashes'] = FALSE;
 /*--------------ROUTE USER------------------------------------*/
 $route['homepage'] ='EndUser_Controller/homepage';
 $route['homepage/(:any)'] ='EndUser_Controller/homepage/$1';
+
 $route ['daftar'] = 'EndUser_Controller/daftar';
-$route['list'] = 'EndUser_Controller/list';
-$route['verifikasi'] = 'EndUser_Controller/verifikasi';
-$route['materi'] = 'EndUser_Controller/materi';
 $route['proses_daftar'] = 'EndUser_Controller/proses_daftar';
+$route['daftarBerhasil/(:any)'] = 'EndUser_Controller/daftarBerhasil/$1';
+
+$route['list'] = 'EndUser_Controller/list';
+
+$route['verifikasi'] = 'EndUser_Controller/verifikasi';
+
+$route['materi'] = 'EndUser_Controller/materi';
 /*------------------------------------------------------------*/
 
 

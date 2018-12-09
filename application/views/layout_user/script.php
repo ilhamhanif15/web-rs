@@ -55,3 +55,8 @@
 		}
 	<?php } ?>
 </script>
+<?php 
+	if(isset($scriptPage)){
+		$this->load->view('script_user/'.$scriptPage);
+	}
+?>
