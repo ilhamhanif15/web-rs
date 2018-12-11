@@ -144,7 +144,29 @@
 						</div>
 						<div class="ubea-accordion-content">
 							<div class="inner">
-								<p>Nama hotel : wik wik</p>
+								<ul>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+									<li>
+										<p>
+										   Nama Hotel : wik wik 
+											<br>
+										   Lokasi	  : blablabla
+										</p>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
