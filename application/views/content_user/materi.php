@@ -7,8 +7,8 @@
 						     <tr>
 						         <th>No</th>
 						         <th>Materi</th>
-						         <th>Tanggal</th>
-						         <th><center>Download</center></th>
+						         <th>Pemateri</th>
+						         <th><center>Download Materi</center></th>
 						         
 						     </tr>
 						 </thead>
@@ -20,7 +20,7 @@
 			        <tr>
 			            <td><?php echo $i ?></td>
 			            <td><?php echo 'Materi '.$i ?></td>
-			            <td><?php echo 'Tanggal '.$i ?></td>
+			            <td><?php echo 'Pemateri '.$i ?></td>
 			            <td>
 			            	<center>
 			            	<a href="#">

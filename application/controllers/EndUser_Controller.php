@@ -118,10 +118,10 @@ class EndUser_Controller extends CI_Controller {
 	{
 		/*Ada Tabel*/
 		$data['content'] = 'list';
-		/*$data['tittle'] = 'List';*/
+		$data['tittle'] = 'List';
 		/*Proses ambil database*/
-		/*$res = $this->model_listDaftar->get();
-		$data['rest'] = $res;*/
+		$res = $this->model_registrasi->get();
+		$data['rest'] = $res;
 		$this->load->view('layout_user/master',$data);
 	}
 

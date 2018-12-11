@@ -34,4 +34,20 @@ class model_registrasi extends CI_Model
 		return $insert_id;
 	}
 
+	public function get($dataCondition = NULL,$limit = NULL,$offset = NULL)
+	{
+		if($offset != NULL && $limit != NULL){
+			$this->db->limit($limit,$offset);
+		}
+		else if($limit != NULL){
+			$this->db->limit($limit);
+		}
+
+		if($dataCondition != NULL){
+			$this->db->where($dataCondition);
+		}
+		$this->db->order_by('id', 'ASC');
+		$res = $this->db->get($this->table);
+		return $res;
+	}
 }

@@ -13,7 +13,7 @@
                         </div>
                  </div>
 	  	<div class="col-md-6 offset-md-3 col-sm-12">
-	  		<h1 style="border-bottom-style: solid;">Verifikasi Pendaftaran</h1>
+	  		<h1 style="border-bottom-style: solid;">Upload Pembayaran</h1>
 	  		<form>
 			  <div class="form-group">
 			    <label for="exampleFormControlInput1">Masukan Nomor Pendaftaran</label>
@@ -23,7 +23,7 @@
 			    <label for="exampleFormControlInput1">Upload File</label>
 			    <input type="file" name="pic" accept="image/*">
 			  </div>
-			  <button class="btn btn-success w-100">Verifikasi</button>
+			  <button class="btn btn-success w-100">Submit</button>
 			</form>
 	  	</div>
 	  </div>

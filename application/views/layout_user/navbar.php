@@ -74,8 +74,11 @@
 			<a class="nav-link" href="<?php echo base_url().'list' ?>">List Pendaftar</a>
 		</li>
         <li>
-        	<a class="nav-link" href="<?php echo base_url().'verifikasi'?>">Verifikasi Daftar</a>
+        	<a class="nav-link" href="<?php echo base_url().'verifikasi'?>">Pembayaran</a>
         </li>
+         <li>
+			<a class="nav-link" href="<?php echo base_url().'materi' ?>">Materi</a>
+		</li>
         <?php
         	if($content == 'homepage'){
         		$linkNavDok = "#";
@@ -90,9 +93,6 @@
 		</li>
 		<li>
 			<a class="nav-link" href="<?php echo base_url().$linkNavHotel ?>" data-nav-section="InfoHotel">Info Hotel</a>
-		</li>
-		<li>
-			<a class="nav-link" href="<?php echo base_url().'materi' ?>">Materi</a>
 		</li>
       </ul>
     </div>
