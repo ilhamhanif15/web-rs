@@ -15,7 +15,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree" id="myMenu">
         <li class="header">MAIN MENU</li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/home' ?>"><i class="fa fa-home"></i> <span  class="menuName" >Beranda</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'admin/dashboard' ?>"><i class="fa fa-home"></i> <span  class="menuName" >Beranda</span></a></li>
         <?php if($this->session->userdata('role') == 'Admin') { ?>
         <li class="menuList"><a href="<?php echo base_url().'master_controller/user' ?>"><i class="fa fa-user"></i> <span class="menuName">User</span></a></li>
         <li class="menuList">
@@ -27,9 +27,9 @@
           </a>
         </li>
         <?php } ?>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/pajak' ?>"><i class="fa fa-server"></i> <span class="menuName">Registrasi</span></a></li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/lowonganpekerjaan' ?>"><i class="fa fa-money"></i> <span class="menuName">Keuangan</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'registrasi' ?>"><i class="fa fa-server"></i> <span class="menuName">Registrasi</span></a></li>
         <li class="menuList"><a href="<?php echo base_url().'master_controller/produk' ?>"><i class="fa fa-folder-open"></i> <span class="menuName">Data Seminar Lama</span></a></li>
+        <!-- <li class="menuList"><a href="<?php echo base_url().'master_controller/lowonganpekerjaan' ?>"><i class="fa fa-money"></i> <span class="menuName">Keuangan</span></a></li> -->
        <!--  <li class="menuList"><a href="<?php echo base_url().'master_controller/aspirasi' ?>"><i class="fa fa-comment"></i> <span class="menuName">Aspirasi</span></a></li>
         <li class="menuList"><a href="<?php echo base_url().'master_controller/pengaduan' ?>"><i class="fa fa-exclamation-triangle"></i> <span class="menuName">Pengaduan</span></a></li>
         <li class="treeview treeLyn menuList">

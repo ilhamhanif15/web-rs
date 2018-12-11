@@ -9,4 +9,17 @@ class Admin_Controller extends CI_Controller {
 		$this->load->view('layout_admin/master',$data);
 	}
 
+	public function registrasi()
+	{
+		$data['content'] = 'registrasi';
+		$this->load->view('layout_admin/master',$data);
+	}
+
+	public function editPendaftar()
+	{
+		$data['content'] = 'editPendaftar';
+		$this->load->view('layout_admin/master',$data);
+	}
+
+
 }

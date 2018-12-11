@@ -1,6 +1,6 @@
 <header class="main-header">
   <!-- Logo -->
-  <a href="index2.html" class="logo">
+  <a href="<?php echo base_url().'admin/dashboard' ?>" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>A</b>LT</span>
     <!-- logo for regular state and mobile devices -->
@@ -24,14 +24,15 @@
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header" style="height: auto;">
+              <img src="<?php echo base_url().'assets/images/img_1.jpg' ?>" class="img-circle" alt="User Image">
               <p>
-                <?php echo $this->session->userdata('name').' - '.$this->session->userdata('role') ?>
-              </p>
+                Selamat Datang, <?php echo $this->session->userdata('name').' - '.$this->session->userdata('role') ?>
+              </p> 
             </li>
             <!-- Menu Footer-->
             <li class="user-footer" style="background: #3c8dbc">
               <div>
-                <a href="<?php echo base_url().'logout' ?>" style="width: 100%" class="btn btn-default btn-flat">Sign out</a>
+                <a href="<?php echo base_url().'admin/logout' ?>" style="width: 100%" class="btn btn-default btn-flat">Sign out</a>
               </div>
             </li>
           </ul>

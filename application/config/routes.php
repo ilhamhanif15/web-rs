@@ -77,4 +77,5 @@ $route['admin/login'] = 'Login_Controller/index';
 $route['admin/auth'] = 'Login_Controller/auth';
 $route['admin/logout'] = 'Login_Controller/logout';
 $route['registrasi'] = 'Admin_Controller/registrasi';
+$route['editpendaftar'] = 'Admin_Controller/editPendaftar';
 /*------------------------------------------------------------*/

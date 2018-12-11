@@ -11,8 +11,8 @@
 			        <tr>
 			            <th>No.Urut</th>
 			            <th>Nama</th>
-			            <th>Institusi/Instansi</th>
-			            <th>Status</th>
+			            <th>Institusi</th>
+			            <th>Jenis Pembayaran</th>
 			            <th>Aksi</th>
 			        </tr>
 			    </thead>
@@ -37,7 +37,7 @@
 			            <td>
 			            	<center>
 			            	<a href="<?php echo base_url().'verifikasi'?>">
-                				<button type="button" class="btn btn-success">
+                				<button type="button" class="btn btn-info">
          							 Pembayaran
         						</button>
                 			</a>

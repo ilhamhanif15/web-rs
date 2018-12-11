@@ -23,7 +23,7 @@
 			    <label for="exampleFormControlInput1">Upload File</label>
 			    <input type="file" name="pic" accept="image/*">
 			  </div>
-			  <button class="btn btn-success w-100">Submit</button>
+			  <button class="btn btn-success w-100">Upload</button>
 			</form>
 	  	</div>
 	  </div>
