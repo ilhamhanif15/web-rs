@@ -125,12 +125,31 @@ class EndUser_Controller extends CI_Controller {
 		$this->load->view('layout_user/master',$data);
 	}
 
+	/*--------------VERIFIKASI-----------------------*/
 	public function verifikasi()
 	{
 		$data['content'] = 'verifikasi';
+		$data['scriptPage'] = 'verifikasi';
 		$this->load->view('layout_user/master',$data);
 	}
 
+	public function apiCekUser($noUrut)
+	{
+		$dataCondition = [
+			'id' =>$noUrut
+		];
+		$res = $this->model_registrasi->get($dataCondition);
+		if($res->num_rows() != 0){
+			$res = $res->result();
+			$ret = json_encode($res[0]);
+		}
+		else{
+			$ret = '{"id":"NotFound"}';
+		}
+		echo $ret;
+	}
+
+	/*------------END OF VERIFIKASI-----------------*/
 	public function materi()
 	{
 		$data['content'] = 'materi';

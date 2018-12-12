@@ -1,4 +1,4 @@
-a:2:{s:6:"expire";i:1544373149;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
+a:2:{s:6:"expire";i:1544646100;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -116,16 +116,16 @@ a:2:{s:6:"expire";i:1544373149;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 			<a class="nav-link" href="http://localhost/web-rs/list">List Pendaftar</a>
 		</li>
         <li>
-        	<a class="nav-link" href="http://localhost/web-rs/verifikasi">Verifikasi Daftar</a>
+        	<a class="nav-link" href="http://localhost/web-rs/verifikasi">Pembayaran</a>
         </li>
+         <li>
+			<a class="nav-link" href="http://localhost/web-rs/materi">Materi</a>
+		</li>
                 <li>
 			<a class="nav-link" href="http://localhost/web-rs/homepage/Dokumentasi" data-nav-section="Dokumentasi">Dokumentasi</a>
 		</li>
 		<li>
 			<a class="nav-link" href="http://localhost/web-rs/homepage/InfoHotel" data-nav-section="InfoHotel">Info Hotel</a>
-		</li>
-		<li>
-			<a class="nav-link" href="http://localhost/web-rs/materi">Materi</a>
 		</li>
       </ul>
     </div>
