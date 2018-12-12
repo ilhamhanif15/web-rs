@@ -1,105 +1,100 @@
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
         ADMIN
         <small>Registrasi</small>
       </h1>
-      <!--<ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Tables</a></li>
-        <li class="active">Data tables</li>
-      </ol> -->
     </section>
 
     <!-- Main content -->
     <section class="content">
+      <div class="row">
+        <!--Daftar User-->
+        <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Tabel Pendaftar Hisfarsijabar 2019</h3>
+              <h3 class="box-title">Data Pendaftar Seminar Hisfarsijabar</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-               <thead>
-			        <tr>
-			            <th>No.Urut</th>
-			            <th>Nama</th>
-			            <th>Institusi</th>
-			            <th>No.Handphone</th>
-			            <th>Email</th>
-			            <th>Alamat</th>
-			            <th>Kota</th>
-			            <th>Kode Pos</th>
-			            <th>Jenis Pembayaran</th>
-			            <th>Aksi</th>
-			        </tr>
-			    </thead>
-			    <tbody>
+              <table id="table1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                  <th style="text-align: center;">Pilihan</th>
+                  <th style="text-align: center;">No.Urut</th>
+                  <th style="text-align: center;">Nama</th>
+                  <th style="text-align: center;">Institusi</th>
+                  <th style="text-align: center;">No.HP</th>
+                  <th style="text-align: center;">Email</th>
+                  <th style="text-align: center;">Alamat</th>
+                  <th style="text-align: center;">Kota</th>
+                  <th style="text-align: center;">Kode Pos</th>
+                  <th style="text-align: center;">Jenis Pembayaran</th>
+                  <th style="text-align: center;">Status</th>
+                  <th style="text-align: center;"><span class="fa fa-edit"></span></th>
+                  <th style="text-align: center;"><span class="fa fa-eye"></span></th>
+                  
+          
+              </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    /*for ($i=0; $i < 300; $i++) { */
+                    foreach($rest->result() as $c)  {
+                  ?>
 
-			    	<?php
-			    		for ($i=0; $i < 300; $i++) { 
-			    	?>
-			        <tr>
-			            <td><?php echo $i ?></td>
-			            <td><?php echo 'Nama '.$i ?></td>
-			            <td><?php echo 'Institusi '.$i ?></td>
-			            <td><?php echo 'NoHp '.$i ?></td>
-			            <td><?php echo 'Email '.$i ?></td>
-			            <td><?php echo 'Alamat '.$i ?></td>
-			            <td><?php echo 'Kota '.$i ?></td>
-			            <td><?php echo 'KodePos '.$i ?></td>
-			            <td><?php echo 'JenisPembayaran'.$i ?></td>
-			            <td>
-			            	<a href="#">
-                				<i class="glyphicon glyphicon-eye-open" style="font-size:18px;color: black"></i>
-                			</a> 
-                			&nbsp
-			            	<a href="<?php echo base_url().'editpendaftar'?>">
-                				<i class="glyphicon glyphicon-edit" style="font-size:18px;color: black"></i>
-                			</a> 
-			            </td>
-			        </tr>
-			        <?php } ?>
-
-			    </tbody>
+                  <tr style="text-align: center;">
+                     <td>
+                        <div class="input-group-btn">
+                          <button type="button" class="btn btn-primary dropdown-toggle btn-sm" style="padding-bottom: 4px;padding-top: 4px;padding-left: 8px;padding-right: 8px;border-radius: 5px;" data-toggle="dropdown">
+                            <span class="fa fa-caret-down fa-lg"></span>
+                          </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#"><span class="glyphicon glyphicon-ok"></span> ACCEPT</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> PENDING</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-remove"></span> DECLINE</a></li>
+                            </ul>
+                        </div>
+                     </td>
+                     <td><?php echo $c->id ?></td>
+                     <td><?php echo $c->nama ?></td>
+                     <td><?php echo $c->institusi ?></td>
+                     <td><?php echo $c->noHP ?></td>
+                     <td><?php echo $c->email ?></td>
+                     <td><?php echo $c->alamat ?></td>
+                     <td><?php echo $c->kota ?></td>
+                     <td><?php echo $c->kodepos ?></td>
+                     <td><?php 
+                           if ($c->jenisBayar == 0) {
+                             echo 'Personal';
+                           }else{
+                             echo 'Sponsor';
+                           } 
+                          ?>  
+                     </td>
+                     <td>
+                          <?php 
+                           if ($c->statusVerif == 0) {
+                             echo 'Pending';
+                           }else{
+                             echo 'Accept';
+                           } 
+                          ?>                        
+                     </td>
+                     <td><a class="btn btn-primary btn-xs" href="<?php echo base_url().'editpendaftar' ?>"><span class="fa fa-edit"></span></a></td>
+                     <td><a class="btn btn-danger btn-xs " href="<?php echo base_url().'detailPeserta' ?>"><span class="fa fa-eye"></span></a></td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
               </table>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-      <!-- /.row -->
+        </div>
+      </div>
+
     </section>
     <!-- /.content -->
   </div>
-
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- DataTables -->
-<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
-</script>

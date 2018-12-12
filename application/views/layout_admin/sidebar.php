@@ -17,7 +17,7 @@
         <li class="header">MAIN MENU</li>
         <li class="menuList"><a href="<?php echo base_url().'admin/dashboard' ?>"><i class="fa fa-home"></i> <span  class="menuName" >Beranda</span></a></li>
         <?php if($this->session->userdata('role') == 'Admin') { ?>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/user' ?>"><i class="fa fa-user"></i> <span class="menuName">User</span></a></li>
+        <!--<li class="menuList"><a href="<?php echo base_url().'master_controller/user' ?>"><i class="fa fa-user"></i> <span class="menuName">User</span></a></li>
         <li class="menuList">
           <a href="<?php echo base_url().'master_controller/log' ?>">
             <i class="fa fa-history"></i> <span class="menuName">Aktivitas</span>
@@ -25,10 +25,10 @@
               <small class="label pull-right bg-green">new</small>
             </span>
           </a>
-        </li>
+        </li> -->
         <?php } ?>
         <li class="menuList"><a href="<?php echo base_url().'registrasi' ?>"><i class="fa fa-server"></i> <span class="menuName">Registrasi</span></a></li>
-        <li class="menuList"><a href="<?php echo base_url().'master_controller/produk' ?>"><i class="fa fa-folder-open"></i> <span class="menuName">Data Seminar Lama</span></a></li>
+        <li class="menuList"><a href="<?php echo base_url().'dataseminarlama' ?>"><i class="fa fa-folder-open"></i> <span class="menuName">Data Seminar Lama</span></a></li>
         <!-- <li class="menuList"><a href="<?php echo base_url().'master_controller/lowonganpekerjaan' ?>"><i class="fa fa-money"></i> <span class="menuName">Keuangan</span></a></li> -->
        <!--  <li class="menuList"><a href="<?php echo base_url().'master_controller/aspirasi' ?>"><i class="fa fa-comment"></i> <span class="menuName">Aspirasi</span></a></li>
         <li class="menuList"><a href="<?php echo base_url().'master_controller/pengaduan' ?>"><i class="fa fa-exclamation-triangle"></i> <span class="menuName">Pengaduan</span></a></li>

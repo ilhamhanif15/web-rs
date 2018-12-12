@@ -3,7 +3,7 @@
     <section class="content-header">
       <h1>
         ADMIN
-        <small>Edit</small>
+        <small>Tambah Data</small>
       </h1>
     </section>
 
@@ -12,21 +12,12 @@
       <div class="col-md-12 col-md-offset-0 ">
       <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Edit Data Peserta</h3>
+              <h3 class="box-title">Tambah Data Peserta</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
              <form class="form-horizontal" method="post" action="">
               <div class="box-body">
-            	<div class="form-group">
-            	     <label class="col-sm-5 control-label">Jenis Pembayaran</label>
-            	   <div class="col-sm-3">
-            	     <select class="form-control" name="role"  required>
-            	       <option>Personal</option>
-            	       <option>Sponsor</option>
-            	     </select>
-            	   </div>
-            	</div>
                 <div class="form-group">
                   <label for="" class="col-sm-5 control-label">Nama Lengkap dan Gelar</label>
                   <div class="col-sm-3">

@@ -78,4 +78,8 @@ $route['admin/auth'] = 'Login_Controller/auth';
 $route['admin/logout'] = 'Login_Controller/logout';
 $route['registrasi'] = 'Admin_Controller/registrasi';
 $route['editpendaftar'] = 'Admin_Controller/editPendaftar';
+$route['detailPeserta'] = 'Admin_Controller/detailPeserta';
+$route['dataseminarlama'] = 'Admin_Controller/dataseminarlama';
+$route['tambahpeserta'] = 'Admin_Controller/tambahPeserta';
+$route['editdatalama'] = 'Admin_Controller/editdatalama';
 /*------------------------------------------------------------*/
