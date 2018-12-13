@@ -141,12 +141,122 @@ class EndUser_Controller extends CI_Controller {
 		$res = $this->model_registrasi->get($dataCondition);
 		if($res->num_rows() != 0){
 			$res = $res->result();
-			$ret = json_encode($res[0]);
+			$data['name'] = $res[0]->nama;
+			$data['adr'] = $res[0]->alamat;
+			if($res[0]->jenisBayar == 0){
+				$data['jenis'] = 'Personal';
+			}else{
+				$data['jenis'] = 'Sponsor';
+			}
+			$ret = json_encode($data);
 		}
 		else{
 			$ret = '{"id":"NotFound"}';
 		}
 		echo $ret;
+	}
+
+	public function uploadBukti()
+	{
+		$cek = $this->additional->cekInputPost([
+			'noUrut',
+		]);
+		
+		if (!$cek['status']){
+			$this->session->set_flashdata('error_msg','
+				<div class="alert alert-danger" role="alert">
+				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				  <span class="sr-only">Error:</span>
+				  Terdapat Kesalahan saat melakukan upload, silahkan ulangi kembali.
+				</div>
+			');
+			return redirect('verifikasi') or exit();
+		}
+
+		$id = $this->input->post('noUrut');
+		$path = $_FILES['bukti']['name'];
+		$newName = "Bukti_".$id.".".pathinfo($path, PATHINFO_EXTENSION); 
+		$config['upload_path']          = './assets/uploads/';
+        $config['allowed_types']        = 'gif|jpg|png|pdf|jpeg';
+        $config['max_size']             = 5120;
+        $config['overwrite']			= TRUE;
+        $config['file_name']			= $newName;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('bukti'))
+        {
+                $error = array('error' => $this->upload->display_errors());
+                $this->session->set_flashdata('error_msg','
+					<div class="alert alert-danger" role="alert">
+					  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					  <span class="sr-only">Error:</span>
+					  Terdapat Kesalahan saat melakukan upload, silahkan ulangi kembali.
+					</div>
+				');
+				return redirect('verifikasi') or exit();
+        }
+        else
+        {
+        		$this->setUploadDB($newName,$id);
+                $data = array('upload_data' => $this->upload->data());
+                 $this->session->set_flashdata('success_msg','
+					<div class="alert alert-success" role="alert">
+					  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					  <span class="sr-only">Success:</span>
+					  Berhasil Melakukan Verifikasi Pembayaran
+					</div>
+				');
+				return redirect('verifikasi') or exit();
+        }
+	}
+
+	public function setUploadDB($newName,$id)
+	{
+		$dataSet = [
+			'bukti' => $newName,
+			'statusVerif' => 1
+		];
+		$dataCondition = [
+			'id'=>$id
+		];
+		if(!$this->model_registrasi->update($dataCondition,$dataSet)){
+			$this->session->set_flashdata('error_msg','
+				<div class="alert alert-danger" role="alert">
+				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				  <span class="sr-only">Error:</span>
+				  Terdapat Kesalahan saat melakukan upload, silahkan ulangi kembali.
+				</div>
+			');
+			return redirect('verifikasi') or exit();
+		}
+		
+		$dataGet = $this->model_registrasi->get(['id' => $id]);
+		$dataGet = $dataGet->result();
+		if($dataGet[0]->jenisBayar == -1){ //If Sponsor
+			$dataPendaftar = $this->model_registrasi->get(['jenisBayar' => $id]);
+			foreach ($dataPendaftar->result() as $c) {
+				if($c->bukti == NULL){
+					$dataSet = [
+						'bukti' => $newName,
+						'statusVerif' => 1
+					];
+					$dataCondition = [
+						'id'=>$c->id
+					];
+					if(!$this->model_registrasi->update($dataCondition,$dataSet)){
+						$this->session->set_flashdata('error_msg','
+							<div class="alert alert-danger" role="alert">
+							  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+							  <span class="sr-only">Error:</span>
+							  Terdapat Kesalahan saat melakukan upload, silahkan ulangi kembali.
+							</div>
+						');
+						return redirect('verifikasi') or exit();
+					}
+				}
+			}
+		}
 	}
 
 	/*------------END OF VERIFIKASI-----------------*/

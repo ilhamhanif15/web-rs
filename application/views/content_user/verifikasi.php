@@ -27,6 +27,8 @@
 </style>
 <div class="container">
 	  <div class="row">
+	  	<?php echo $this->session->flashdata('error_msg') ?>
+	  	<?php echo $this->session->flashdata('success_msg') ?>
 	  	<div class="col-md-4 col-sm-4 col-xs-12" >
                         <div class="alert alert-info text-center" style="margin-top: 10px">
                           <h3> NOTIFIKASI</h3> 
@@ -41,16 +43,17 @@
                  </div>
 	  	<div class="col-md-6 offset-md-3 col-sm-12">
 	  		<h1 style="border-bottom-style: solid;">Upload Pembayaran</h1>
-	  		<form>
+	  		<form action="<?php echo base_url().'verifikasi/upload' ?>" method="post" enctype="multipart/form-data">
 			  <div class="form-group">
 			    <label for="exampleFormControlInput1">Masukan Nomor Pendaftaran</label>
-			    <input type="text" class="form-control" id="inputNoUrut" placeholder="Masukkan Nomor Urut" required="">
+			    <input type="text" class="form-control" id="inputNoUrut" placeholder="Masukkan Nomor Urut">
 			  </div>
 			  <button type="button" class="btn btn-primary" id="btnCek">
 			  	Cek Nomor
 			  </button>
 			  <div class="dataPendaftar">
 			  	<h4 style="border-bottom-style: solid;margin-bottom: 5px;">Data Pendaftar</h4>
+			  	<input type="hidden" name="noUrut" value="" id="noUrut">
 			  	<table class="detailCek">
 			  		<tr>
 				  		<td>NAMA </td>
@@ -73,8 +76,8 @@
 			  	</div>
 			  </div>
 			  <div class="form-group uploadPembayaran">
-			    <label for="exampleFormControlInput1">Upload File</label>
-			    <input type="file" name="pic" accept="image/*">
+			    <label for="exampleFormControlInput1">Upload File (Format Gambar atau PDF)</label>
+			    <input type="file" name="bukti">
 			  </div>
 			  <button class="btn btn-success uploadPembayaran" type="submit">Upload</button>
 			</form>

@@ -66,6 +66,7 @@ $route['list'] = 'EndUser_Controller/list';
 
 $route['verifikasi'] = 'EndUser_Controller/verifikasi';
 $route['api/cekUser/(:any)'] = 'EndUser_Controller/apiCekUser/$1';
+$route['verifikasi/upload'] = 'EndUser_Controller/uploadBukti';
 
 $route['materi'] = 'EndUser_Controller/materi';
 /*------------------------------------------------------------*/
