@@ -33,7 +33,8 @@
 		         <button class="btn btn-success" style="width: 100%;" id="btnSaveAsPict" onclick="saveAsPict()"> Simpan Sebagai Gambar</button>
 		         <hr/>
 		         Jika sudah melakukan pembayaran, bisa melanjutkan ke tahap konfirmasi untuk meng-upload bukti pembayaran<br/>
-		         <button class="btn btn-success" id="btnKonfirmasi" style="width: 100%;">Ke Tahap Konfirmasi <i class="glyphicon glyphicon-menu-right pull-right"></i></button>
+		         <a href="<?php echo base_url().'verifikasi'?>">
+		         <button class="btn btn-success" id="btnKonfirmasi" style="width: 100%;">Ke Tahap Konfirmasi <i class="glyphicon glyphicon-menu-right pull-right"></i></button></a>
 	        	</p>
 		        <hr />
 	        </div>
