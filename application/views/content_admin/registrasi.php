@@ -32,10 +32,6 @@
                   <th style="text-align: center;">Kode Pos</th>
                   <th style="text-align: center;">Jenis Pembayaran</th>
                   <th style="text-align: center;">Status</th>
-                  <th style="text-align: center;"><span class="fa fa-edit"></span></th>
-                  <th style="text-align: center;"><span class="fa fa-eye"></span></th>
-                  
-          
               </tr>
                 </thead>
                 <tbody>
@@ -54,6 +50,8 @@
                               <li><a href="#"><span class="glyphicon glyphicon-ok"></span> ACCEPT</a></li>
                               <li><a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> PENDING</a></li>
                               <li><a href="#"><span class="glyphicon glyphicon-remove"></span> DECLINE</a></li>
+                              <li><a href="<?php echo base_url().'editpendaftar' ?>"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                              <li><a href="<?php echo base_url().'detailPeserta' ?>"><i class="fa fa-eye"></i> View</a></li>
                             </ul>
                         </div>
                      </td>
@@ -82,8 +80,6 @@
                            } 
                           ?>                        
                      </td>
-                     <td><a class="btn btn-primary btn-xs" href="<?php echo base_url().'editpendaftar' ?>"><span class="fa fa-edit"></span></a></td>
-                     <td><a class="btn btn-danger btn-xs " href="<?php echo base_url().'detailPeserta' ?>"><span class="fa fa-eye"></span></a></td>
                   </tr>
                   <?php } ?>
                 </tbody>
