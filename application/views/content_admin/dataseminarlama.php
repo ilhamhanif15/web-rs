@@ -31,9 +31,6 @@
                   <th style="text-align: center;">Institusi</th>
                   <th style="text-align: center;">No.HP</th>
                   <th style="text-align: center;">Email</th>
-                  <th style="text-align: center;">Alamat</th>
-                  <th style="text-align: center;">Kota</th>
-                  <th style="text-align: center;">Kode Pos</th>
                   <th style="text-align: center;">Pilihan</th>
                 </tr>
                 </thead>
@@ -49,9 +46,6 @@
                      <td><?php echo 'Institusi '.$i ?></td>
                      <td><?php echo 'NoHp '.$i ?></td>
                      <td><?php echo 'Email '.$i ?></td>
-                     <td><?php echo 'Alamat '.$i ?></td>
-                     <td><?php echo 'Kota '.$i ?></td>
-                     <td><?php echo 'KodePos '.$i ?></td>
                      <td>
                         <div class="input-group-btn">
                           <button type="button" class="btn btn-primary dropdown-toggle btn-sm" style="padding-bottom: 4px;padding-top: 4px;padding-left: 8px;padding-right: 8px;border-radius: 5px;" data-toggle="dropdown">

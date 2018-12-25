@@ -40,4 +40,47 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <style type="text/css">
+    .alert-success-custom {
+      position: fixed;
+      border-style: solid;
+      border-radius: 30px;
+      background-color: #50cb50;
+      color: white;
+      width: 33.33%;
+      padding: 15px;
+      text-align: center;
+      z-index: 999999;
+      top: 5px;
+      margin-left: 23vw;
+    }
+
+    .alert-danger-custom {
+      position: fixed;
+      border-style: solid;
+      border-radius: 30px;
+      background-color: #dd4b39;
+      color: white;
+      width: 33.33%;
+      padding: 15px;
+      text-align: center;
+      z-index: 999999;
+      top: 5px;
+      margin-left: 23vw;
+    }
+
+    .alert-success-custom > .glyphicon {
+      position: absolute;
+      left: 20px;
+      top: 12px;
+      font-size: 22px;
+    }
+
+    .alert-danger-custom > .glyphicon {
+      font-size: 22px;
+      top: 5px;
+      left: -8px;
+    }
+
+  </style>
 </head>

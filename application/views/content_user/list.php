@@ -36,7 +36,7 @@
 			            </td>
 			            <td>
 			            	<center>
-			            	<a href="<?php echo base_url().'verifikasi'?>">
+			            	<a href="<?php echo base_url().'verifikasi/'.$c->id?>">
                 				<button type="button" class="btn btn-info">
          							 Pembayaran
         						</button>

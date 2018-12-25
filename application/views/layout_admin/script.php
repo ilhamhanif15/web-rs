@@ -45,7 +45,7 @@
 
   var counterPull = 0;
 
-  function searchMenu() {
+/*  function searchMenu() {
       var input, filter, ul, li, a, i;
       input = document.getElementById("mySearch");
       filter = input.value.toUpperCase();
@@ -57,18 +57,11 @@
       treeLyn = ul.getElementsByClassName('treeLyn')[0];
 
       li2 = ul.getElementsByClassName("menuList2");
-      /*test = li[1].getElementsByTagName('span')[0];
-      if(test.innerHTML.toUpperCase().indexOf(filter) >-1){
-        li[1].style.display = "";
-      }else{
-        li[1].style.display = "none";
-      }
-      console.log(test.innerHTML);*/
-      /*if (counterPull == 0) {
+      if (counterPull == 0) {
         lyn = ul.getElementsByClassName('lynMenu')[0];
         lyn.style.display = 'block';
         counterPull = 1;
-      }*/
+      }
       var cekS = true;
       
       for (i = 0; i < li.length; i++) {
@@ -82,8 +75,6 @@
 
       for (i = 0; i < li2.length; i++) {
           a2 = li2[i].getElementsByClassName("menuName2")[0];
-          /*lynParent = li2[i].parentElement;
-          cekParent = lynParent.classList.contains('lynMenu');*/
           if (a2.innerHTML.toUpperCase().indexOf(filter) > -1) {
               if(!cekOpen){
                 lyn.click();
@@ -96,6 +87,11 @@
           }
       }
 
-  }
-
+  }*/
 </script>
+
+  <?php 
+    if(isset($scriptPage)){
+      $this->load->view('script_admin/'.$scriptPage);
+    }
+  ?>

@@ -65,9 +65,9 @@ $route['daftarBerhasil/(:any)'] = 'EndUser_Controller/daftarBerhasil/$1';
 $route['list'] = 'EndUser_Controller/list';
 
 $route['verifikasi'] = 'EndUser_Controller/verifikasi';
+$route['verifikasi/(:any)'] = 'EndUser_Controller/verifikasi/$1';
 $route['api/cekUser/(:any)'] = 'EndUser_Controller/apiCekUser/$1';
 $route['verifikasi/upload'] = 'EndUser_Controller/uploadBukti';
-
 $route['materi'] = 'EndUser_Controller/materi';
 /*------------------------------------------------------------*/
 
@@ -78,9 +78,17 @@ $route['admin'] = 'Login_Controller/index';
 $route['admin/login'] = 'Login_Controller/index';
 $route['admin/auth'] = 'Login_Controller/auth';
 $route['admin/logout'] = 'Login_Controller/logout';
+
+$route['admin/akun'] = 'Admin_Controller/akun';
+
 $route['registrasi'] = 'Admin_Controller/registrasi';
-$route['editpendaftar'] = 'Admin_Controller/editPendaftar';
-$route['detailPeserta'] = 'Admin_Controller/detailPeserta';
+$route['api/registrasi/statusPembayaran/(:any)/(:any)'] = 'Admin_Controller/apiStatusVerif/$1/$2';
+
+$route['editpendaftar/(:num)'] = 'Admin_Controller/editPendaftar/$1';
+$route['api/deleteBukti/(:num)'] = 'Admin_Controller/apiHapusBukti/$1';
+$route['editPendaftarSimpan/(:num)'] = 'Admin_Controller/editPendaftarSimpan/$1';
+
+/*$route['detailPeserta'] = 'Admin_Controller/detailPeserta';*/
 $route['dataseminarlama'] = 'Admin_Controller/dataseminarlama';
 $route['tambahpeserta'] = 'Admin_Controller/tambahPeserta';
 $route['editdatalama'] = 'Admin_Controller/editdatalama';

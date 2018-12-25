@@ -126,7 +126,7 @@ class EndUser_Controller extends CI_Controller {
 	}
 
 	/*--------------VERIFIKASI-----------------------*/
-	public function verifikasi()
+	public function verifikasi($id=NULL)
 	{
 		$data['content'] = 'verifikasi';
 		$data['scriptPage'] = 'verifikasi';
@@ -214,8 +214,7 @@ class EndUser_Controller extends CI_Controller {
 	public function setUploadDB($newName,$id)
 	{
 		$dataSet = [
-			'bukti' => $newName,
-			'statusVerif' => 1
+			'bukti' => $newName
 		];
 		$dataCondition = [
 			'id'=>$id
@@ -238,8 +237,7 @@ class EndUser_Controller extends CI_Controller {
 			foreach ($dataPendaftar->result() as $c) {
 				if($c->bukti == NULL){
 					$dataSet = [
-						'bukti' => $newName,
-						'statusVerif' => 1
+						'bukti' => $newName
 					];
 					$dataCondition = [
 						'id'=>$c->id
