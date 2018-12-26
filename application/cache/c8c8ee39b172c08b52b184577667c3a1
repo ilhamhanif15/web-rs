@@ -1,4 +1,4 @@
-a:2:{s:6:"expire";i:1545501125;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
+a:2:{s:6:"expire";i:1545787256;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -39,8 +39,8 @@ a:2:{s:6:"expire";i:1545501125;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 
     </head>	<body>		
 		<div class="ubea-loader"></div>
-			<div id="page">
-				<!-- <nav class="ubea-nav" role="navigation">
+		<div id="page">
+			<!-- <nav class="ubea-nav" role="navigation">
 	<div class="ubea-container">
 		<div class="row">
 			<div class="col-sm-2 col-xs-12">
@@ -130,8 +130,8 @@ a:2:{s:6:"expire";i:1545501125;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
       </ul>
     </div>
   </div>
-</nav> 				<!-- END OF NAVBAR -->
-			    <style type="text/css">
+</nav> 			<!-- END OF NAVBAR -->
+		    <style type="text/css">
 	.btn-tambahOrg {
 		background-color: #5385ff;
 		border-color: #5385ff;
@@ -199,7 +199,7 @@ a:2:{s:6:"expire";i:1545501125;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 			</form>
 	  	</div>
 	</div>
-</div>				<footer id="ubea-footer" role="contentinfo">
+</div>			<footer id="ubea-footer" role="contentinfo">
 	<div class="ubea-container">
 		
 		<div class="row copyright">
@@ -224,7 +224,7 @@ a:2:{s:6:"expire";i:1545501125;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 
 <div class="gototop js-top" style="bottom: 20px;right: 14px;">
 	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-</div>			    <!-- jQuery -->
+</div>		    <!-- jQuery -->
 <!-- <script src="assets/js/jquery.min.js"></script> -->
 <!-- <script src="http://localhost/web-rs/assets/AdminLTE-2.4.5/bower_components/jquery/dist/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -371,6 +371,6 @@ a:2:{s:6:"expire";i:1545501125;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 		`;
 		return html;
 	}
-</script>			</div>
-  </body>
+</script>		</div>
+  	</body>
 </html>
