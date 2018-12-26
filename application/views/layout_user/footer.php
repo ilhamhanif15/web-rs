@@ -4,15 +4,9 @@
 		<div class="row copyright">
 			<div class="col-md-12">
 				<p class="pull-left">
-					<small class="block">&copy; 2019 All Rights Reserved.</small> 
-				</p>
-				<p class="pull-right">
-					<ul class="ubea-social-icons pull-right">
-						<li><a href="#"><i class="icon-facebook" style="color: black"></i></a></li>
-						<li><a href="#"><i class="icon-instagram" style="color: black"></i></a></li>
-						<li><a href="#"><i class="icon-email" style="color: black"></i></a></li>
-						<li><a href="#"><i class="icon-linkedin" style="color: black"></i></a></li>
-						<li><a href="#"><i class="icon-twitter" style="color: black"></i></a></li>
+					<ul class="ubea-social-icons pull-left">		
+						<small class="block">More information: Visit an <a href="#">admin@hisfarsijabar.com</a> or call 08281345251363 (Admin).</small> 
+						<small class="block">Copyright &copy; 2019 Hisfarsijabar. All Rights Reserved.</small> 
 					</ul>
 				</p>
 			</div>
