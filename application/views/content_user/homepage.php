@@ -31,61 +31,55 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
 					<h2>Dokumentasi</h2>
-					<p>Foto seminar 2019</p>
+					<p>Foto seminar 2018</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 1">
+					<a href="<?php echo base_url().'assets/images/img1.jpeg'?>" class="ubea-card-item image-popup" title="">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
-							<p>Title</p>
+							<img src="<?php echo base_url().'assets/images/img1.jpeg'?>" alt="Image" class="img-responsive">
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 2">
+					<a href="<?php echo base_url().'assets/images/img2.jpeg'?>" class="ubea-card-item image-popup" title="">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
-							<p>Title</p>
+							<img src="<?php echo base_url().'assets/images/img2.jpeg'?>" alt="Image" class="img-responsive">
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 3">
+					<a href="<?php echo base_url().'assets/images/img3.jpeg'?>" class="ubea-card-item image-popup" title="">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
-							<p>Title</p>
+							<img src="<?php echo base_url().'assets/images/img3.jpeg'?>" alt="Image" class="img-responsive">
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 4">
+					<a href="<?php echo base_url().'assets/images/img4.jpeg'?>" class="ubea-card-item image-popup" title="">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
-							<p>Title</p>
+							<img src="<?php echo base_url().'assets/images/img4.jpeg'?>" alt="Image" class="img-responsive">
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 5">
+					<a href="<?php echo base_url().'assets/images/img5.jpeg'?>" class="ubea-card-item image-popup" title="">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
-							<p>Title</p>
+							<img src="<?php echo base_url().'assets/images/img5.jpeg'?>" alt="Image" class="img-responsive">
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" class="ubea-card-item image-popup" title="Seminar 6">
+					<a href="<?php echo base_url().'assets/images/img6.jpeg'?>" class="ubea-card-item image-popup" title="">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url().'assets/images/img_bg_1.jpg'?>" alt="Image" class="img-responsive">
-							<p>Title</p>
+							<img src="<?php echo base_url().'assets/images/img6.jpeg'?>" alt="Image" class="img-responsive">
 						</figure>
 					</a>
 				</div>
