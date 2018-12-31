@@ -66,17 +66,21 @@
                      <td><?php echo $c->institusi ?></td>
                      <td><?php echo $c->noHP ?></td>
                      <td><?php echo $c->email ?></td>
-                     <td><?php 
+                     <td><?php
+                            $styleCetak = NULL; 
                            if ($c->jenisBayar == 0) {
-                             echo 'Personal';
+                              echo 'Personal';
+                           }else if($c->jenisBayar == -1){
+                              echo 'Sponsor';
                            }else{
-                             echo 'Sponsor';
+                              echo 'Sponsor dari No. '.$c->jenisBayar;
+                              $styleCetak = 'display: none;';
                            } 
                           ?>  
                      </td>
                      <td>
-                      <a href="<?php echo base_url().'admin/cetakKwitansi' ?>">
-                       <button class="btn btn-primary btnCetak" data-nama="<?php echo $c->nama ?>" data-id="<?php echo $c->id ?>"><i class="glyphicon glyphicon-print"></i> Cetak</button>
+                      <a style="<?php echo $styleCetak ?>" href="<?php echo base_url().'admin/cetakKwitansi/'.$c->id ?>" target='_blank'>
+                       <button class="btn btn-primary btnCetak"><i class="glyphicon glyphicon-print"></i> Cetak</button>
                       </a>
                      </td>
                      <td>

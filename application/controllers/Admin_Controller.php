@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_Controller extends CI_Controller {
-	public $harga = 20000;
+	public $harga = 1250000;
 
 	function __construct()
     {
@@ -371,22 +371,68 @@ class Admin_Controller extends CI_Controller {
 		return redirect('admin/akun') or exit();
 	}
 
-	public function cetak($id){
-      //load mpdf libray
-      $this->load->library('M_pdf');
+	public function cetak($id)
+	{
+		//load mpdf libray
+		$this->load->library('M_pdf');
 
-      $mpdf = $this->m_pdf->load([
-        'mode' => 'utf-8',
-        'format' => 'A5-L'
-      ]);
+		$mpdf = $this->m_pdf->load([
+		'mode' => 'utf-8',
+		'format' => 'A5-L'
+		]);
 
-      $dataCondition = ['id' => $id];
-      $pendaftar = $this->model_registrasi->get($dataCondition);
+		$dataCondition = ['id' => $id];
+		$pendaftar = $this->model_registrasi->get($dataCondition);
+		$pendaftar = $pendaftar->result();
+		$pd = $pendaftar[0];
+		$data['pd'] = $pd;
+		if($pd->jenisBayar == -1){
+			$dataCondition2 = ['jenisBayar' => $id];
+			$listPdSponsor = $this->model_registrasi->get($dataCondition2);
+			$jumOrg = $listPdSponsor->num_rows() + 1;
+		}else{
+			$jumOrg = 1;
+		}
+		$hargana = ($this->harga*$jumOrg)+$id;
+		$harga = number_format($hargana);
+		$data['harga'] = str_replace(',', '.', $harga).',00';
+		$data['terbilang'] = ucwords($this->additional->convertNum($hargana));
 
-      $data['coba'] = 'Coba';
-      $mpdf->WriteHTML($this->load->view('cetak/kwitansi',$data,true));
+		$mpdf->WriteHTML($this->load->view('cetak/kwitansi',$data,true));
 
-      $mpdf->Output();
+		$mpdf->Output();
+    }
+
+    public function sendEmail()
+    {
+    	//Load email library
+		$this->load->library('email');
+
+		//SMTP & mail configuration
+		$config = array(
+		    'protocol'  => 'smtp',
+		    'smtp_host' => 'ssl://smtp.googlemail.com',
+		    'smtp_port' => 465,
+		    'smtp_user' => 'parmancyxoke@gmail.com',
+		    'smtp_pass' => 'Parmancyx15',
+		    'mailtype'  => 'html',
+		    'charset'   => 'utf-8'
+		);
+		$this->email->initialize($config);
+		$this->email->set_mailtype("html");
+		$this->email->set_newline("\r\n");
+
+		//Email content
+		$htmlContent = '<h1>Sending email via SMTP server</h1>';
+		$htmlContent .= '<p>This email has sent via SMTP server from CodeIgniter application.</p>';
+
+		$this->email->to('ilhamhanif1512@gmail.com');
+		$this->email->from('parmancyxoke@gmail.com','MyWebsite');
+		$this->email->subject('How to send email via SMTP server in CodeIgniter');
+		$this->email->message($htmlContent);
+
+		//Send email
+		$this->email->send();
     }
 
 }

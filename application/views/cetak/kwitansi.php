@@ -78,19 +78,19 @@
 	        </div>
 	        <div class="col-xs-7 backg" style="width: 65%;height: 100%">
 	        	<br/>
-	        	No. 1
+	        	No. <?php echo $pd->id ?>
 	        	<br/><br/><br/><br/>
 	        	<table class="tbl-content">
 		        	<tr>
 		        		<td style="padding-right: 10px;">Telah Terima Dari </td>
 		        		<td style="padding-right: 10px;">:</td>
-		        		<td> NAMA PESERTA</td>
+		        		<td> <?php echo $pd->nama ?></td>
 		        	</tr>
 		        	<br/><br/>
 		        	<tr>
 		        		<td style="padding-right: 10px;">Uang Sejumlah </td>
 		        		<td style="padding-right: 10px;">:</td>
-		        		<td> Satu Juta Rupiah</td>
+		        		<td> <?php echo $terbilang ?> Rupiah</td>
 		        	</tr>
 		        	<br/><br/>
 		        	<tr>
@@ -104,7 +104,7 @@
 					<p style="padding-top: 70px;font-size: 12pt !important;">Mitty Mauliana, S.Si., Apt.</p>
 				</div>
 				<div>
-					Jumlah Rp. 1.400.000,00
+					Jumlah Rp. <?php echo $harga ?>
 				</div>
 	        </div>
 	    </div>

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class EndUser_Controller extends CI_Controller {
-	public $harga = 20000;
+	public $harga = 1250000;
 
 	public function homepage($navSection = NULL)
 	{
@@ -108,7 +108,18 @@ class EndUser_Controller extends CI_Controller {
 	public function daftarBerhasil($id){
 		$data['content'] = 'daftarBerhasil';
 		$data['scriptPage'] = 'daftarBerhasil';
-		$hargana = $this->harga+$id;
+		$dataCondition = ['id' => $id];
+		$pendaftar = $this->model_registrasi->get($dataCondition);
+		$pendaftar = $pendaftar->result();
+		$pd = $pendaftar[0];
+		if($pd->jenisBayar == -1){
+			$dataCondition2 = ['jenisBayar' => $id];
+			$listPdSponsor = $this->model_registrasi->get($dataCondition2);
+			$jumOrg = $listPdSponsor->num_rows() + 1;
+		}else{
+			$jumOrg = 1;
+		}
+		$hargana = ($this->harga*$jumOrg)+$id;
 		$data['harga']=number_format($hargana);
 		$this->load->view('layout_user/master',$data);
 	}

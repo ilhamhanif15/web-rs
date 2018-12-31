@@ -98,4 +98,6 @@ $route['tambahpeserta'] = 'Admin_Controller/tambahPeserta';
 $route['editdatalama'] = 'Admin_Controller/editdatalama';
 
 $route['admin/cetakKwitansi/(:num)'] = 'Admin_Controller/cetak/$1';
+
+$route['admin/sendEmail'] = 'Admin_Controller/sendEmail';
 /*------------------------------------------------------------*/
