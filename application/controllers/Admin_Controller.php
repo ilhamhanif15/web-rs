@@ -36,6 +36,7 @@ class Admin_Controller extends CI_Controller {
 		$dataCondition = [
 			'id'=>$id
 		];
+
 		if(!$this->model_registrasi->update($dataCondition,$dataSet)){
 			$success = 0;
 			$msg = '
@@ -53,6 +54,35 @@ class Admin_Controller extends CI_Controller {
 				</div>
 			';
 		}
+
+		$pendaftar = $this->model_registrasi->get($dataCondition);
+		$pendaftar = $pendaftar->result();
+		$pd = $pendaftar[0];
+		if($pd->jenisBayar == -1){
+			$dataCondition2 = ['jenisBayar'=>$id];
+			$listDaftar = $this->model_registrasi->get($dataCondition2);
+			foreach ($listDaftar->result() as $c) {
+				$dataCondition3 = ['id' => $c->id];
+				if(!$this->model_registrasi->update($dataCondition3,$dataSet)){
+					$success = 0;
+					$msg = '
+						<div class="alert-danger-custom">
+							<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+							 Terjadi Kesalahan saat merubah status pembayaran pada nomor urut ke-'.$id.', Silahkan Ulangi Kembali.          
+						</div>
+					';
+				}else{
+					$success = 1;
+					$msg = '
+						<div class="alert-success-custom">
+							<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+							 Berhasil Merubah Status Pembayaran          
+						</div>
+					';
+				}
+			}
+		}
+
 		$data['msg'] = $msg;
 		$data['success'] = $success;
 		echo json_encode($data);

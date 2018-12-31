@@ -68,6 +68,7 @@
                      <td><?php echo $c->email ?></td>
                      <td><?php
                             $styleCetak = NULL; 
+                            $idDaftar = $c->id;
                            if ($c->jenisBayar == 0) {
                               echo 'Personal';
                            }else if($c->jenisBayar == -1){
@@ -75,6 +76,7 @@
                            }else{
                               echo 'Sponsor dari No. '.$c->jenisBayar;
                               $styleCetak = 'display: none;';
+                              $idDaftar = $c->jenisBayar;
                            } 
                           ?>  
                      </td>
@@ -94,7 +96,7 @@
                         -
                       <?php } ?>
                     </td>
-                     <td id="SV<?php echo $c->id ?>">
+                     <td class="SV<?php echo $idDaftar ?>" id="SVD<?php echo $c->id ?>">
                           <?php 
                            if ($c->statusVerif == 0) {
                               echo '<span class="label label-warning" style="font-size: inherit;">Ditunda</span>';

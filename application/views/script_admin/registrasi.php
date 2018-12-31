@@ -73,7 +73,11 @@
 				}else{
 					txt = '<span class="label label-success" style="font-size: inherit;">Diterima</span>';
 				}
-				$('#SV'+id).html(txt);
+				if ($('.SV'+id).length){
+					$('.SV'+id).html(txt);
+				}else{
+					$('#SVD'+id).html(txt);
+				}
 			}
 		});
 	});
