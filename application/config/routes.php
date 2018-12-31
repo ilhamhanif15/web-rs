@@ -67,19 +67,23 @@ $route['list'] = 'EndUser_Controller/list';
 $route['verifikasi'] = 'EndUser_Controller/verifikasi';
 $route['verifikasi/(:any)'] = 'EndUser_Controller/verifikasi/$1';
 $route['api/cekUser/(:any)'] = 'EndUser_Controller/apiCekUser/$1';
-$route['verifikasi/upload'] = 'EndUser_Controller/uploadBukti';
+$route['verifikasiUpload'] = 'EndUser_Controller/uploadBukti';
 $route['materi'] = 'EndUser_Controller/materi';
 /*------------------------------------------------------------*/
 
 
 /*------------ROUTE ADMIN-------------------------------------*/
 $route['admin/dashboard'] = 'Admin_Controller/index';
+
 $route['admin'] = 'Login_Controller/index';
 $route['admin/login'] = 'Login_Controller/index';
 $route['admin/auth'] = 'Login_Controller/auth';
 $route['admin/logout'] = 'Login_Controller/logout';
 
 $route['admin/akun'] = 'Admin_Controller/akun';
+$route['admin/tambahAkun'] = 'Admin_Controller/tambahAkun';
+$route['admin/editAkun'] = 'Admin_Controller/editAkun';
+$route['admin/editAkunPass'] = 'Admin_Controller/editAkunPass';
 
 $route['registrasi'] = 'Admin_Controller/registrasi';
 $route['api/registrasi/statusPembayaran/(:any)/(:any)'] = 'Admin_Controller/apiStatusVerif/$1/$2';
@@ -92,4 +96,6 @@ $route['editPendaftarSimpan/(:num)'] = 'Admin_Controller/editPendaftarSimpan/$1'
 $route['dataseminarlama'] = 'Admin_Controller/dataseminarlama';
 $route['tambahpeserta'] = 'Admin_Controller/tambahPeserta';
 $route['editdatalama'] = 'Admin_Controller/editdatalama';
+
+$route['admin/cetakKwitansi/(:num)'] = 'Admin_Controller/cetak/$1';
 /*------------------------------------------------------------*/

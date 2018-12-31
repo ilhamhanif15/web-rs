@@ -40,6 +40,9 @@
 	.custom-activate {
 	  background-color: #ff9b4a;
 	}
+	.custom-activate > a{
+		color: white !important;
+	}
 	.nav > li > a{
 		color: black;
 	}
@@ -64,19 +67,29 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="custom-activate">
-			<a class="nav-link" href="<?php echo base_url().'homepage' ?>" style="color: white;">Home</a>
+      	<?php 
+      		$dataAct = [
+      			'homepage' => '',
+      			'daftar' => '',
+      			'list' => '',
+      			'verifikasi' => '',
+      			'materi' => ''
+      		];
+      		$dataAct[$content] = 'custom-activate';
+      	?>
+        <li class="<?php echo $dataAct['homepage'] ?>">
+			<a class="nav-link" href="<?php echo base_url().'homepage' ?>" >Home</a>
 		</li>
-		<li>
+		<li class="<?php echo $dataAct['daftar'] ?>">
 			<a class="nav-link" href="<?php echo base_url().'daftar' ?> ">Daftar</a>
 		</li>
-		<li>
+		<li class="<?php echo $dataAct['list'] ?>">
 			<a class="nav-link" href="<?php echo base_url().'list' ?>">List Pendaftar</a>
 		</li>
-        <li>
+        <li class="<?php echo $dataAct['verifikasi'] ?>">
         	<a class="nav-link" href="<?php echo base_url().'verifikasi'?>">Pembayaran</a>
         </li>
-         <li>
+        <li class="<?php echo $dataAct['materi'] ?>">
 			<a class="nav-link" href="<?php echo base_url().'materi' ?>">Materi</a>
 		</li>
         <?php

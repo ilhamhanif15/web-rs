@@ -43,7 +43,6 @@
                  </div>
 	  	<div class="col-md-6 offset-md-3 col-sm-12">
 	  		<h1 style="border-bottom-style: solid;">Upload Pembayaran</h1>
-	  		<form action="<?php echo base_url().'verifikasi/upload' ?>" method="post" enctype="multipart/form-data">
 			  <div class="form-group">
 			    <label for="exampleFormControlInput1">Masukan Nomor Pendaftaran</label>
 			    <input type="text" class="form-control" id="inputNoUrut" placeholder="Masukkan Nomor Urut">
@@ -51,6 +50,7 @@
 			  <button type="button" class="btn btn-primary" id="btnCek">
 			  	Cek Nomor
 			  </button>
+		  	<form action="<?php echo base_url().'verifikasiUpload' ?>" method="post" enctype="multipart/form-data">
 			  <div class="dataPendaftar">
 			  	<h4 style="border-bottom-style: solid;margin-bottom: 5px;">Data Pendaftar</h4>
 			  	<input type="hidden" name="noUrut" value="" id="noUrut">
@@ -74,10 +74,17 @@
 			  	<div class="notFound">
 			  		<center>Data Tidak Ditemukan/Tidak ada</center>
 			  	</div>
+			  	<div class="sudahUpload">
+			  		<center>
+			  			Anda Sudah Melakukan Upload Bukti<br/>
+			  			Hubungi kontak berikut ini jika ingin melakukan upload ulang<br/>
+			  			Nomor Kontak (Nama Kontak)
+			  		</center>
+			  	</div>
 			  </div>
 			  <div class="form-group uploadPembayaran">
-			    <label for="exampleFormControlInput1">Upload File (Format Gambar atau PDF)</label>
-			    <input type="file" name="bukti">
+			    <label for="exampleFormControlInput1">Upload File (Format Gambar)</label>
+			    <input type="file" name="bukti" required="">
 			  </div>
 			  <button class="btn btn-success uploadPembayaran" type="submit">Upload</button>
 			</form>

@@ -50,4 +50,14 @@ class model_user extends CI_Model
 		$res = $this->db->get($this->table);
 		return $res;
 	}
+
+	public function update($dataCondition,$dataSet)
+	{
+		$this->db->where($dataCondition);
+		if($this->db->update($this->table, $dataSet)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }

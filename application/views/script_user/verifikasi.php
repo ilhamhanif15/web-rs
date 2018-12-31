@@ -7,6 +7,7 @@
 	jpCek = $('#jpCek');
 	detailCek = $('.detailCek');
 	notFound = $('.notFound');
+	sudahUpload = $('.sudahUpload');
 
 	uploadPembayaran.hide();
 	dataPendaftar.hide();
@@ -26,15 +27,24 @@
 				here.html('Cek Nomor');
 				here.removeAttr('disabled');
 				if(data.id != 'NotFound'){
-					namaCek.text(data.name);
-					alamatCek.text(data.adr);
-					jpCek.text(data.jenis);
-					$('#noUrut').val(noUrut);
-					detailCek.show();
-					notFound.hide();
-					uploadPembayaran.show();
+					if(data.bukti){
+						detailCek.hide();
+						sudahUpload.show();
+						notFound.hide();
+						uploadPembayaran.hide();
+					}else{
+						namaCek.text(data.name);
+						alamatCek.text(data.adr);
+						jpCek.text(data.jenis);
+						$('#noUrut').val(noUrut);
+						detailCek.show();
+						notFound.hide();
+						sudahUpload.hide();
+						uploadPembayaran.show();
+					}
 				}else{
 					detailCek.hide();
+					sudahUpload.hide();
 					notFound.show();
 					uploadPembayaran.hide();
 				}
@@ -43,4 +53,10 @@
 			inputNoUrut.focus();
 		}
 	});
+
+	<?php if($idReg != NULL){ ?>
+		inputNoUrut.val(<?php echo $idReg ?>);
+		$('#btnCek').click();
+	<?php } ?>
+
 </script>

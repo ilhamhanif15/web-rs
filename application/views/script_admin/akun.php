@@ -1,11 +1,40 @@
 <script type="text/javascript">
 	
 	var namaModal = $('#namaModal');
-	$('#btnEdit').click(function() {
+	var idModal = $('.idModal');
+	$('.btnEdit').click(function() {
 		dis = $(this);
-		data = dis.data('nama');
-		namaModal.val(data);
+		nama = dis.data('nama');
+		id = dis.data('id');
+		uname = dis.data('uname');
+		email = dis.data('email');
+		namaModal.val(nama);
+		idModal.val(id);
+		$('#unameModal').val(uname);
+		$('#emailModal').val(email);
 		$('#editAkunModal').modal('show'); 
+	});
+
+	$('.btnEditPass').click(function() {
+		dis = $(this);
+		id = dis.data('id');
+		idModal.val(id);
+		$('#editPassModal').modal('show'); 
+	});
+
+	var pass1 = $('#pass1Modal');
+	var pass2 = $('#pass2Modal');
+	var passBar = $('.passBar');
+	var textErrorPass = $('.textErrorPass');
+	$('#btnSimpanPass').click(function() {
+		if(pass1.val() != pass2.val()){
+			textErrorPass.text('Password Tidak Sama');
+			textErrorPass.fadeIn('slow');
+			passBar.addClass('has-error');
+			return false;
+		}else{
+			return true;
+		}
 	});
 
 	$('#addBtn').click(function() {
@@ -23,8 +52,9 @@
 			textError.text('Password Tidak Sama');
 			textError.fadeIn('slow');
 			passForm.addClass('has-error');
+			return false;
 		}
-		return false;
+		return true;
 	});
 
 </script>

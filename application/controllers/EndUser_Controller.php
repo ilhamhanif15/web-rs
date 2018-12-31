@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class EndUser_Controller extends CI_Controller {
+	public $harga = 20000;
 
 	public function homepage($navSection = NULL)
 	{
@@ -107,8 +108,8 @@ class EndUser_Controller extends CI_Controller {
 	public function daftarBerhasil($id){
 		$data['content'] = 'daftarBerhasil';
 		$data['scriptPage'] = 'daftarBerhasil';
-		$harga = 20000+$id;
-		$data['harga']=number_format($harga);
+		$hargana = $this->harga+$id;
+		$data['harga']=number_format($hargana);
 		$this->load->view('layout_user/master',$data);
 	}
 
@@ -130,6 +131,7 @@ class EndUser_Controller extends CI_Controller {
 	{
 		$data['content'] = 'verifikasi';
 		$data['scriptPage'] = 'verifikasi';
+		$data['idReg'] = $id;
 		$this->load->view('layout_user/master',$data);
 	}
 
@@ -147,6 +149,11 @@ class EndUser_Controller extends CI_Controller {
 				$data['jenis'] = 'Personal';
 			}else{
 				$data['jenis'] = 'Sponsor';
+			}
+			if($res[0]->bukti == NULL){
+				$data['bukti'] = False;
+			}else{
+				$data['bukti'] = True;
 			}
 			$ret = json_encode($data);
 		}
@@ -177,7 +184,7 @@ class EndUser_Controller extends CI_Controller {
 		$path = $_FILES['bukti']['name'];
 		$newName = "Bukti_".$id.".".pathinfo($path, PATHINFO_EXTENSION); 
 		$config['upload_path']          = './assets/uploads/';
-        $config['allowed_types']        = 'gif|jpg|png|pdf|jpeg';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['max_size']             = 5120;
         $config['overwrite']			= TRUE;
         $config['file_name']			= $newName;

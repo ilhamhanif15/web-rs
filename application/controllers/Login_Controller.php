@@ -3,9 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login_Controller extends CI_Controller {
 
+	function __construct()
+    {
+		parent::__construct();
+    }
+
 	public function index()
 	{
-		$this->load->view('content_admin/login');
+		if($this->session->userdata('id') != NULL)
+        {
+        	redirect('admin/dashboard');
+        }else{
+			$this->load->view('content_admin/login');
+        }
 	}
 
 	public function auth(){
@@ -26,7 +36,7 @@ class Login_Controller extends CI_Controller {
 			$res = $res->result();
 			$data2 = [
 				'id' => $res[0]->id,
-				'name' => $res[0]->nama
+				'nama' => $res[0]->nama
 			];
 			$user = array_merge($data,$data2);
 			$this->session->set_userdata($user);

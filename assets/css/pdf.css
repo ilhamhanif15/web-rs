@@ -1,0 +1,68 @@
+body {
+	font-size: 10pt;
+}
+table {
+	font-size: 10pt;
+}
+h1 {
+	font-size: 16pt !important;
+	text-align: center;
+}
+h2 {
+	font-size: 12pt;
+	text-align: center;
+}
+p {
+	font-size: 10pt;
+}
+.garuda {
+	text-align: center
+}
+table {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.tab {
+	text-indent: 40px;
+}
+.ttd {
+	padding-top: 30px;
+	width: 220px;
+	text-align: center;
+	margin-left: auto;
+}
+.footer {
+	position: absolute;
+	bottom: 10;
+	right: 120;
+	font-size: 9pt !important;
+	text-align: center;
+}
+
+.more-padding {
+	padding: 5px 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+td {
+	vertical-align: text-top;
+}
+u {
+	text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  text-align: center;
+}

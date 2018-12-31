@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_Controller extends CI_Controller {
+	public $harga = 20000;
+
+	function __construct()
+    {
+		parent::__construct();
+        if($this->session->userdata('id') == NULL)
+        {
+        	redirect('admin/login');
+        }
+    }
 
 	public function index()
 	{
@@ -191,5 +201,192 @@ class Admin_Controller extends CI_Controller {
 		$data['rest'] = $users;
 		$this->load->view('layout_admin/master',$data);
 	}
+
+	public function tambahAkun()
+	{
+		$nama = $this->input->post('nama');
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$cek = $this->additional->cekInputPost([
+			'nama',
+			'email',
+			'username',
+			'password'
+		]);
+		
+		if (!$cek['status']){
+			$this->session->set_flashdata('msg_notif','
+				<div class="alert alert-danger" role="alert">
+				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				  <span class="sr-only">Error:</span>
+				  Terjadi Kesalahan Saat Membuat Akun Baru, Silahkan Ulangi Kembali
+				</div>
+			');
+			return redirect('admin/akun') or exit();
+		}
+
+		$password = $this->additional->encryptIt($password);
+		$dataInsert = [
+			'nama' => $nama,
+			'email' => $email,
+			'username' => $username,
+			'password' => $password
+		];
+
+		if($this->model_user->insert($dataInsert) == NULL){
+			$success = 0;
+			$msg = '
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+					Terjadi Kesalahan Saat Menambahkan Akun Baru, Silahkan Ulangi Kembali
+				</div>
+			';
+		}else{
+			$success = 1;
+			$msg = '
+				<div class="alert alert-success alert-dismissible" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					<span class="sr-only">Success:</span>
+					Berhasil Menambahkan Akun Baru
+				</div>
+			';
+		}
+		$this->session->set_flashdata('msg_notif',$msg);
+		return redirect('admin/akun') or exit();
+	}
+
+	public function editAkun()
+	{
+		$nama = $this->input->post('nama');
+		$id = $this->input->post('id');
+		$username = $this->input->post('username');
+		$email = $this->input->post('email');
+		$cek = $this->additional->cekInputPost([
+			'nama',
+			'username',
+			'email',
+			'id'
+		]);
+		
+		if (!$cek['status']){
+			$this->session->set_flashdata('msg_notif','
+				<div class="alert alert-danger" role="alert">
+				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				  <span class="sr-only">Error:</span>
+				  Terjadi Kesalahan Saat Membuat Akun Baru, Silahkan Ulangi Kembali
+				</div>
+			');
+			return redirect('admin/akun') or exit();
+		}
+
+		$dataSet = [
+			'nama' => $nama,
+			'username' => $username,
+			'email' => $email
+		];
+		$dataCondition = ['id' => $id];
+		if(!$this->model_user->update($dataCondition,$dataSet)){
+			$success = 0;
+			$msg = '
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+					Terjadi Kesalahan Saat Melakukan Update, Silahkan Ulangi Kembali
+				</div>
+			';
+		}else{
+			$success = 1;
+			$msg = '
+				<div class="alert alert-success alert-dismissible" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					<span class="sr-only">Success:</span>
+					Berhasil Melakukan Update Akun
+				</div>
+			';
+			$cekId = $this->additional->decryptSess($this->session->userdata('id'),'id');
+			if($id == $cekId){
+				$this->session->set_userdata($dataSet);
+			}
+		}
+		$this->session->set_flashdata('msg_notif',$msg);
+		return redirect('admin/akun') or exit();
+	}
+
+	public function editAkunPass()
+	{
+		$password = $this->input->post('password');
+		$id = $this->input->post('id');
+		$cek = $this->additional->cekInputPost([
+			'password',
+			'id'
+		]);
+		
+		if (!$cek['status']){
+			$this->session->set_flashdata('msg_notif','
+				<div class="alert alert-danger" role="alert">
+				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				  <span class="sr-only">Error:</span>
+				  Terjadi Kesalahan Saat Membuat Akun Baru, Silahkan Ulangi Kembali
+				</div>
+			');
+			return redirect('admin/akun') or exit();
+		}
+
+		$dataSet = [
+			'password' => $this->additional->encryptIt($password)
+		];
+		$dataCondition = ['id' => $id];
+		if(!$this->model_user->update($dataCondition,$dataSet)){
+			$success = 0;
+			$msg = '
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+					Terjadi Kesalahan Saat Melakukan Update, Silahkan Ulangi Kembali
+				</div>
+			';
+		}else{
+			$success = 1;
+			$msg = '
+				<div class="alert alert-success alert-dismissible" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					<span class="sr-only">Success:</span>
+					Berhasil Melakukan Update Akun
+				</div>
+			';
+			$cekId = $this->additional->decryptSess($this->session->userdata('id'),'id');
+			if($id == $cekId){
+				$this->session->set_userdata($dataSet);
+			}
+		}
+		$this->session->set_flashdata('msg_notif',$msg);
+		return redirect('admin/akun') or exit();
+	}
+
+	public function cetak($id){
+      //load mpdf libray
+      $this->load->library('M_pdf');
+
+      $mpdf = $this->m_pdf->load([
+        'mode' => 'utf-8',
+        'format' => 'A5-L'
+      ]);
+
+      $dataCondition = ['id' => $id];
+      $pendaftar = $this->model_registrasi->get($dataCondition);
+
+      $data['coba'] = 'Coba';
+      $mpdf->WriteHTML($this->load->view('cetak/kwitansi',$data,true));
+
+      $mpdf->Output();
+    }
 
 }

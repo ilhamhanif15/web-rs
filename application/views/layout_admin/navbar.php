@@ -19,14 +19,14 @@
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
     
-            <span class="hidden-xs"><?php echo $this->session->userdata('name') ?></span>
+            <span class="hidden-xs"><?php echo $this->session->userdata('nama') ?></span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header" style="height: auto;">
-              <img src="<?php echo base_url().'assets/images/img_1.jpg' ?>" class="img-circle" alt="User Image">
+              <img src="<?php echo base_url().'assets/images/avatar2.png' ?>" class="img-circle" alt="User Image">
               <p>
-                Selamat Datang, <?php echo $this->session->userdata('name').' - '.$this->session->userdata('role') ?>
+                <?php echo $this->session->userdata('nama').'<br/>'.$this->session->userdata('email') ?>
               </p> 
             </li>
             <!-- Menu Footer-->

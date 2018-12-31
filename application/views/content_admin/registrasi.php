@@ -34,6 +34,7 @@
                   <th style="text-align: center;">No.HP</th>
                   <th style="text-align: center;">Email</th>
                   <th style="text-align: center;">Jenis Pembayaran</th>
+                  <th style="text-align: center;">Cetak Kwitansi</th>
                   <th style="text-align: center;">Bukti</th>
                   <th style="text-align: center;">Status</th>
               </tr>
@@ -74,6 +75,11 @@
                           ?>  
                      </td>
                      <td>
+                      <a href="<?php echo base_url().'admin/cetakKwitansi' ?>">
+                       <button class="btn btn-primary btnCetak" data-nama="<?php echo $c->nama ?>" data-id="<?php echo $c->id ?>"><i class="glyphicon glyphicon-print"></i> Cetak</button>
+                      </a>
+                     </td>
+                     <td>
                         <?php 
                         if($c->bukti != NULL){
                         ?>
@@ -81,7 +87,7 @@
                           <i class="fas fa-file-image" data-img="<?php echo base_url().'assets/uploads/'.$c->bukti ?>" style="font-size: 40px;"></i>
                         </a>
                       <?php } else{ ?>
-                        Tidak Ada
+                        -
                       <?php } ?>
                     </td>
                      <td id="SV<?php echo $c->id ?>">

@@ -4,6 +4,11 @@
     background-color: #dd4b39;
     color: white;
   }
+  .textErrorPass {
+    text-align: center;
+    background-color: #dd4b39;
+    color: white;
+  }
 </style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -51,7 +56,8 @@
                             <span class="fa fa-caret-down fa-lg"></span>
                           </button>
                             <ul class="dropdown-menu" style="border-color: #b9b9b9;">
-                              <li><a href="#" id="btnEdit" data-nama='<?php echo $c->nama ?>' style="color: #00a65a;"><i class="fa fa-pencil-square-o"></i> UBAH</a></li>
+                              <li><a href="#" class="btnEdit" data-nama='<?php echo $c->nama ?>' data-id="<?php echo $c->id ?>" data-uname="<?php echo $c->username ?>" data-email="<?php echo $c->email ?>" style="color: #00a65a;"><i class="fa fa-pencil-square-o"></i> UBAH DATA</a></li>
+                              <li><a href="#" class="btnEditPass" data-id="<?php echo $c->id ?>" ><i class="fa fa-lock"></i> UBAH PASSWORD</a></li>
                             </ul>
                         </div>
                      </td>
@@ -77,13 +83,28 @@
         <div class="modal-content">
           <div class="modal-body">
             <h3 class='box-title' style="margin-bottom: 10px;"><strong>Edit Data Akun</strong></h3>
-            <form class="form-horizontal" method="post" action="">
+            <form class="form-horizontal" method="post" action="<?php echo base_url().'admin/editAkun' ?>">
+              <input type="hidden" class="idModal" value="" placeholder="Nama" name="id" required="" >
               <div class="box-body">
 
                 <div class="form-group">
                   <label for="" class="col-sm-3 control-label">Nama</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" id="namaModal" value="" placeholder="Nama" name="nama" required="" >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="" class="col-sm-3 control-label">Username</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="unameModal" value="" placeholder="Username" name="username" required="" >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="" class="col-sm-3 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="emailModal" value="" placeholder="Email" name="email" required="" >
                   </div>
                 </div>
 
@@ -98,12 +119,46 @@
       </div>
     </div>
 
+    <div class="modal fade" id="editPassModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class='box-title' style="margin-bottom: 10px;"><strong>Edit Data Akun</strong></h3>
+            <form class="form-horizontal" method="post" action="<?php echo base_url().'admin/editAkunPass' ?>">
+              <input type="hidden" class="idModal" value="" placeholder="Nama" name="id" required="" >
+              <div class="box-body">
+                <p class="textErrorPass" style="display: none;"></p>
+                <div class="form-group passBar">
+                  <label for="" class="col-sm-3 control-label">Password Baru</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="pass1Modal" value="" placeholder="Password" name="password" required="" >
+                  </div>
+                </div>
+
+                <div class="form-group passBar">
+                  <label for="" class="col-sm-3 control-label">Ketik Ulang Password</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="pass2Modal" value="" placeholder="Ketik Ulang Password" name="repassword" required="" >
+                  </div>
+                </div>
+
+              </div>
+              <div class="box-footer">
+                <button type="submit" id="btnSimpanPass" class="btn btn-info pull-right">Simpan</button>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="addAkunModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
             <h3 class='box-title' style="margin-bottom: 10px;"><strong>Tambah Akun</strong></h3>
-            <form class="form-horizontal" id="addForm" method="post" action="">
+            <form class="form-horizontal" id="addForm" method="post" action="<?php echo base_url().'admin/tambahAkun' ?>">
               <div class="box-body">
                 <p class="textError" style="display: none;"></p>
                 <div class="form-group">

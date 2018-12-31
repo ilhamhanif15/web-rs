@@ -1,4 +1,4 @@
-a:2:{s:6:"expire";i:1545800443;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
+a:2:{s:6:"expire";i:1546180856;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -82,6 +82,9 @@ a:2:{s:6:"expire";i:1545800443;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
 	.custom-activate {
 	  background-color: #ff9b4a;
 	}
+	.custom-activate > a{
+		color: white !important;
+	}
 	.nav > li > a{
 		color: black;
 	}
@@ -106,19 +109,19 @@ a:2:{s:6:"expire";i:1545800443;s:7:"headers";a:0:{}}ENDCI---><!doctype html>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="custom-activate">
-			<a class="nav-link" href="http://localhost/web-rs/homepage" style="color: white;">Home</a>
+      	        <li class="">
+			<a class="nav-link" href="http://localhost/web-rs/homepage" >Home</a>
 		</li>
-		<li>
+		<li class="custom-activate">
 			<a class="nav-link" href="http://localhost/web-rs/daftar ">Daftar</a>
 		</li>
-		<li>
+		<li class="">
 			<a class="nav-link" href="http://localhost/web-rs/list">List Pendaftar</a>
 		</li>
-        <li>
+        <li class="">
         	<a class="nav-link" href="http://localhost/web-rs/verifikasi">Pembayaran</a>
         </li>
-         <li>
+        <li class="">
 			<a class="nav-link" href="http://localhost/web-rs/materi">Materi</a>
 		</li>
                 <li>

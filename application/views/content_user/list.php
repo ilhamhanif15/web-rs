@@ -1,3 +1,8 @@
+<style type="text/css">
+	.table > tbody > tr > td{
+		text-align: center;
+	}
+</style>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -35,13 +40,23 @@
 			            	?>	
 			            </td>
 			            <td>
-			            	<center>
-			            	<a href="<?php echo base_url().'verifikasi/'.$c->id?>">
-                				<button type="button" class="btn btn-info">
-         							 Pembayaran
-        						</button>
-                			</a>
-                			</center>
+			            	<?php 
+			            	if($c->statusVerif == 1){
+			            	?>
+			            	Sudah Diterima
+                			<?php 
+                			} else { 
+                			?>
+				            	<center>
+					            	<a href="<?php echo base_url().'verifikasi/'.$c->id?>">
+		                				<button type="button" class="btn btn-info">
+		         							 Pembayaran
+		        						</button>
+		                			</a>
+	                			</center>
+                			<?php	
+                			}
+                			?>
                 		</td>
 			        </tr>
 			        <?php } ?>
