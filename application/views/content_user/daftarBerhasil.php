@@ -26,15 +26,15 @@
 		         Anda telah berhasil melakukan pendaftaran<br/>
 		         Silahkan lanjutkan dengan membayar biaya pendaftaran sebesar<br/>
 		         <strong style="font-size: 25px;">Rp. <?php echo $harga ?></strong><br/>
-		         <strong>Lakukan Pembayaran beserta nomor uniknya<br/>seperti yang tertera diatas ke rekening berikut:</strong><br/>
-		         BNI: 13513513516 (Solji)<br/>
-		         BCA: 26246262461 (Suwaldi WikWIk)<br/>
-		         <button class="btn btn-primary" style="width: 100%;" id="btnSimpanEmail"><i class="glyphicon glyphicon-envelope "></i> Simpan lewat email</button>
-		         <button class="btn btn-success" style="width: 100%;" id="btnSaveAsPict" onclick="saveAsPict()"> Simpan Sebagai Gambar</button>
+		         <strong style="font-size: 20px;">(<?php echo $terbilang ?> Rupiah)</strong><br/>
+		         Lakukan Pembayaran beserta <b>nomor uniknya</b> seperti yang tertera diatas ke rekening berikut:<br/>
+		         <strong>Bank Mandiri: 1300014069366 (A.n hisfarsi jabar)</strong><br/><hr/>
+		         <!-- <button class="btn btn-primary" style="width: 100%;" id="btnSimpanEmail"><i class="glyphicon glyphicon-envelope "></i> Simpan lewat email</button> -->
+		         <button class="btn btn-primary" style="width: 100%;" id="btnSaveAsPict" onclick="saveAsPict()"> Klik Disini Untuk Simpan Sebagai Gambar</button>
 		         <hr/>
-		         Jika sudah melakukan pembayaran, bisa melanjutkan ke tahap konfirmasi untuk meng-upload bukti pembayaran<br/>
-		         <a href="<?php echo base_url().'verifikasi'?>">
-		         <button class="btn btn-success" id="btnKonfirmasi" style="width: 100%;">Ke Tahap Konfirmasi <i class="glyphicon glyphicon-menu-right pull-right"></i></button></a>
+		         Jika sudah melakukan pembayaran, bisa melanjutkan ke tahap Konfirmasi Pembayaran untuk meng-upload bukti pembayaran<br/>
+		         <a href="<?php echo base_url().'verifikasi/'.$id?>">
+		         <button class="btn btn-success" id="btnKonfirmasi" style="width: 100%;">Ke Tahap Konfirmasi Pembayaran<i class="glyphicon glyphicon-menu-right pull-right"></i></button></a>
 	        	</p>
 		        <hr />
 	        </div>

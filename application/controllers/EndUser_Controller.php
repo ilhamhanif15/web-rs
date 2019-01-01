@@ -84,7 +84,7 @@ class EndUser_Controller extends CI_Controller {
 					$alamat = $this->input->post('alamat'.$i);
 					$kota = $this->input->post('kota'.$i);
 					$kodePos = $this->input->post('kodePos'.$i);
-					$dataInput = [
+					$dataInput2 = [
 						'nama' => $nama,
 						'alamat' => $alamat,
 						'kota' => $kota,
@@ -95,13 +95,13 @@ class EndUser_Controller extends CI_Controller {
 						'institusi' => $institusi
 					];
 				}
-				if(!$this->model_registrasi->insert($dataInput)){
+				if(!$this->model_registrasi->insert($dataInput2)){
 					$this->session->set_flashdata('erro_msg','Terjadi Kesalahan Saat Mendaftar, cek koneksi internet lalu Ulangi kembali');
-					/*delete data sebelumnya*/
 					return redirect('daftar') or exit();
 				}
 			}
 		}
+		$this->sendEmail($dataInput,$insertedId);
 		return redirect('daftarBerhasil/'.$insertedId);
 	}
 
@@ -120,7 +120,10 @@ class EndUser_Controller extends CI_Controller {
 			$jumOrg = 1;
 		}
 		$hargana = ($this->harga*$jumOrg)+$id;
-		$data['harga']=number_format($hargana);
+		$harga = number_format($hargana);
+		$data['harga'] = str_replace(',', '.', $harga).',00';
+		$data['terbilang'] = ucwords($this->additional->convertNum($hargana));
+		$data['id'] = $id;
 		$this->load->view('layout_user/master',$data);
 	}
 
@@ -281,5 +284,49 @@ class EndUser_Controller extends CI_Controller {
 		$data['content'] = 'materi';
 		$this->load->view('layout_user/master',$data);
 	}
+
+	public function sendEmail($data,$id)
+    {
+    	//Load email library
+		$this->load->library('email');
+
+		//SMTP & mail configuration
+		$config = array(
+		    'protocol'  => 'smtp',
+		    'smtp_host' => 'ssl://smtp.googlemail.com',
+		    'smtp_port' => 465,
+		    'smtp_user' => 'panitiahisfarsijabar@gmail.com',
+		    'smtp_pass' => 'hisfarsijabar2017',
+		    'mailtype'  => 'html',
+		    'charset'   => 'utf-8'
+		);
+		$this->email->initialize($config);
+		$this->email->set_mailtype("html");
+		$this->email->set_newline("\r\n");
+
+		//Email content
+		if($data['jenisBayar'] == -1){
+			$dataCondition2 = ['jenisBayar' => $id];
+			$listPdSponsor = $this->model_registrasi->get($dataCondition2);
+			$jumOrg = $listPdSponsor->num_rows() + 1;
+		}else{
+			$jumOrg = 1;
+		}
+		$hargana = ($this->harga*$jumOrg)+$id;
+		$harga = number_format($hargana);
+		$data['harga'] = str_replace(',', '.', $harga).',00';
+		$data['terbilang'] = ucwords($this->additional->convertNum($hargana));
+		$data['id'] = $id;
+
+		$htmlContent = $this->load->view('cetak/templateEmail',$data,true);
+
+		$this->email->to($data['email']);
+		$this->email->from('panitiahisfarsijabar@gmail.com','Hisfarsi Jabar');
+		$this->email->subject('[HISFARSIJABAR] Cara Pembayaran');
+		$this->email->message($htmlContent);
+
+		//Send email
+		$this->email->send();
+    }
 
 }
