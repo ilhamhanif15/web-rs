@@ -2,24 +2,9 @@
 <div id="ubea-hero" class="js-fullheight"  data-section="home" style="padding-top: 82px;">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/dk.jpg);">
-	   		<div class="overlay"></div>
-	   		<div class="container">
-	   		</div>
+	   	<li style="background-image:  url(<?php echo base_url() ?>assets/images/brosur1.jpg);">
 	   	</li>
-	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/img3.jpeg);">
-	   		<div class="overlay"></div>
-	   		<div class="container">
-	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-	   			</div>
-	   		</div>
-	   	</li>
-	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/img4.jpeg);">
-	   		<div class="overlay"></div>
-	   		<div class="container">
-	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-	   			</div>
-	   		</div>
+	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur2.jpg);">
 	   	</li>
 	  	</ul>
   	</div>
@@ -283,7 +268,7 @@
     </div>
 </div>
   
-<div id="ubea-contact" data-section="contact" class="ubea-cover ubea-cover-xs" style="background-image:url(<?php echo base_url() ?>assets/images/dk.jpg);">
+<div id="ubea-contact" data-section="contact" class="ubea-cover ubea-cover-xs" style="background-image:url(<?php echo base_url() ?>assets/images/1.jpg);">
 	<div class="overlay"></div>
 	<div class="ubea-container">
 		<div class="row text-center">
@@ -291,7 +276,7 @@
 				<div class="display-tc">
 					<div class="col-md-12">
 						<h3>Informasi lebih lanjut jika terjadi kekeliruan data silahkan hubungi kami,</h3>
-						<h3><a href="#">admin@hisfarsijabar.com</a></h3>
+						<h3><a href="">panitiahisfarsijabar@gmail.com</a></h3>
 					</div>
 				</div>
 			</div>
