@@ -28,7 +28,7 @@
 		         <strong style="font-size: 25px;">Rp. <?php echo $harga ?></strong><br/>
 		         <strong style="font-size: 20px;">(<?php echo $terbilang ?> Rupiah)</strong><br/>
 		         Lakukan Pembayaran beserta <b>nomor uniknya</b> seperti yang tertera diatas ke rekening berikut:<br/>
-		         <strong>Bank Mandiri: 1300014069366 (A.n hisfarsi jabar)</strong><br/><hr/>
+		         <strong>Bank Mandiri: 130-00-1406936-6 (A.n hisfarsi jabar)</strong><br/><hr/>
 		         <!-- <button class="btn btn-primary" style="width: 100%;" id="btnSimpanEmail"><i class="glyphicon glyphicon-envelope "></i> Simpan lewat email</button> -->
 		         <button class="btn btn-primary" style="width: 100%;" id="btnSaveAsPict" onclick="saveAsPict()"> Klik Disini Untuk Simpan Sebagai Gambar</button>
 		         <hr/>
