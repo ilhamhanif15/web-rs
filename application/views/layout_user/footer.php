@@ -5,8 +5,8 @@
 			<div class="col-md-12">
 				<p class="pull-left">
 					<ul class="ubea-social-icons pull-left">		
-						<small class="block">More information: Visit an <a href="#">panitiahisfarsijabar@gmail.com</a> or call 08281345251363 (Admin).</small> 
-						<small class="block">Copyright &copy; 2019 Hisfarsijabar. All Rights Reserved.</small> 
+						<small class="block">More information: Visit an <a href="#">panitiahisfarsijabar@gmail.com</a> or call 082240203703 (Admin).</small> 
+						<small class="block">Copyright &copy; 2019 <a href="https://Hisfarsijabar.com"> Hisfarsijabar.</a> All Rights Reserved.</small> 
 					</ul>
 				</p>
 			</div>
