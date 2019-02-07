@@ -6,6 +6,8 @@
 	   	</li>
 	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur2.jpg);">
 	   	</li>
+	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur3.jpg);">
+	   	</li>
 	  	</ul>
   	</div>
 </div>
