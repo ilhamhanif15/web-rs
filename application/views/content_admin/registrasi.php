@@ -2,6 +2,15 @@
   .divider-menu{
     margin-top: 3px;margin-bottom: 3px;border-width: 2px;border-color: #b9b9b9;
   }
+  .loading-menu{
+    position: fixed;background: #000000c9;z-index: 999;height: 100%;
+  }
+  .loading-menu > h4{
+    color: white;text-align: center;margin-top: 16%;margin-left: -15%;
+  }
+  .loading-menu > h4 > i{
+    margin-bottom: 15px;
+  }
 </style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -116,6 +125,10 @@
           </div>
           <!-- /.box -->
         </div>
+        <div class="col-xs-12 loading-menu">
+          <h4>
+            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br/>MOHON TUNGGU SEBENTAR...</h4>
+        </div>
       </div>
 
     </section>
@@ -177,7 +190,7 @@
                       <td id="bukti"></td>
                     </tr>
                 </table>
-              <a href="<?php echo base_url().'editpendaftar'?>" class="btn btn-success"><span class="fa fa-edit"></span> Ubah</a>
+              <a href="#" class="btn btn-success" id="linkUbah"><span class="fa fa-edit"></span> Ubah</a>
           </div>
         </div>
       </div>

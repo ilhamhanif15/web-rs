@@ -22,6 +22,7 @@ class EndUser_Controller extends CI_Controller {
 
 	public function proses_daftar()
 	{
+		$this->db->trans_begin();
 		$jenis = $this->input->post('jenis');
 		$nama = $this->input->post('nama');
 		$institusi = $this->input->post('institusi');
@@ -49,6 +50,7 @@ class EndUser_Controller extends CI_Controller {
 				  Terjadi Kesalahan Saat Mendaftar
 				</div>
 			');
+			$this->db->trans_rollback();
 			return redirect('daftar') or exit();
 		}
 
@@ -62,7 +64,19 @@ class EndUser_Controller extends CI_Controller {
 			'email' => $email,
 			'institusi' => $institusi
 		];
-		$insertedId = $this->model_registrasi->insert($dataInput);
+		try{
+			$insertedId = $this->model_registrasi->insert($dataInput);
+		} catch(Exception $e){
+			$this->db->trans_rollback();
+			$this->session->set_flashdata('error_msg','
+				<div class="alert alert-danger" role="alert">
+				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				  <span class="sr-only">Error:</span>
+				  Terjadi Kesalahan Saat Mendaftar, Cek koneksi internet lalu ulangi kembali
+				</div>
+			');
+			return redirect('daftar') or exit(); 
+		}
 		if($insertedId == NULL){
 			$this->session->set_flashdata('error_msg','
 				<div class="alert alert-danger" role="alert">
@@ -95,12 +109,19 @@ class EndUser_Controller extends CI_Controller {
 						'institusi' => $institusi
 					];
 				}
-				if(!$this->model_registrasi->insert($dataInput2)){
+				try{
+					if(!$this->model_registrasi->insert($dataInput2)){
+						$this->session->set_flashdata('erro_msg','Terjadi Kesalahan Saat Mendaftar, cek koneksi internet lalu Ulangi kembali');
+						return redirect('daftar') or exit();
+					}
+				} catch(Exception $e){
+					$this->db->trans_rollback();
 					$this->session->set_flashdata('erro_msg','Terjadi Kesalahan Saat Mendaftar, cek koneksi internet lalu Ulangi kembali');
 					return redirect('daftar') or exit();
 				}
 			}
 		}
+		$this->db->trans_commit();
 		$this->sendEmail($dataInput,$insertedId);
 		return redirect('daftarBerhasil/'.$insertedId);
 	}

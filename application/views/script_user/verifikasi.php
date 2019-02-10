@@ -8,6 +8,7 @@
 	detailCek = $('.detailCek');
 	notFound = $('.notFound');
 	sudahUpload = $('.sudahUpload');
+	LTB = $('#elmLTB');
 
 	uploadPembayaran.hide();
 	dataPendaftar.hide();
@@ -37,6 +38,7 @@
 						alamatCek.text(data.adr);
 						jpCek.text(data.jenis);
 						$('#noUrut').val(noUrut);
+						$('#linkTataBayar').prop("href","<?php echo base_url().'daftarBerhasil/' ?>"+noUrut);
 						detailCek.show();
 						notFound.hide();
 						sudahUpload.hide();

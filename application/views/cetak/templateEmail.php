@@ -10,7 +10,7 @@
 			<center><h2>Selamat Anda Berhasil Mendaftar, Lanjut Ke Tahap Pembayaran</h2></center>
 			<div class="col-md-offset-2 col-md-8">
 				<p style="text-align: justify;">
-					Selamat, anda berhasil mendaftar seminar hisfarsijabar dengan <b style="font-size: 20px">Nomor Urut <?php echo $id ?>.</b>
+					Selamat, anda berhasil mendaftar seminar hisfarsijabar dengan <b style="font-size: 20px">Nomor Pendaftaran <?php echo $id ?>.</b>
 					<hr/>
 					<b>Langkah Pertama</b> (Transfer Biaya Pendaftaran):<br/>
 					Silahkan lanjutkan dengan membayar biaya pendaftaran sebesar,<br/>

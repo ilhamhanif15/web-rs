@@ -1,0 +1,5 @@
+*.pyc
+/application/cache/
+/system/
+/tests/
+/user_guide/

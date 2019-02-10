@@ -40,7 +40,15 @@
 
  <script>
   $(function () {
-    $('#table1').DataTable();
+    $('#table1').DataTable({
+      "language": {
+        "search": "Pencarian :",
+        "paginate": {
+          "next": "Selanjutnya",
+          "previous": "Sebelumnya"
+        }
+     }
+    });
   });
 
   var counterPull = 0;

@@ -26,7 +26,14 @@
 <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
 <script type="text/javascript">
 	$('#table-data').DataTable({
-		responsive: true
+		responsive: true,
+		"language": {
+		   "search": "Pencarian :",
+		   "paginate": {
+		      "next": "Selanjutnya",
+		      "previous": "Sebelumnya"
+		    }
+		 }
 	});
 
 	<?php if($content == 'homepage'){ ?>

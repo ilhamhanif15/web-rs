@@ -12,6 +12,8 @@
 		$('#imagemodal').modal('show');
 	}
 
+	$('.loading-menu').hide();
+
 	var noUrut = $('#noUrut');
 	var namaRegistrasi = $('#namaRegistrasi');
 	var institusi = $('#institusi');
@@ -23,6 +25,7 @@
 	var jenisBayar = $('#jenisBayar');
 	var bukti= $('#bukti');
 	var linkBukti = "<?php echo base_url().'assets/uploads/' ?>";
+	var linkUbah = $('#linkUbah');
 
 	$('.btnLihat').on('click', function(e) {
 		e.preventDefault();
@@ -51,6 +54,7 @@
 			`;
 			bukti.append(txt);
 		}
+		linkUbah.attr("href", "<?php echo base_url().'editpendaftar/'?>"+detail.id);
 		$('#viewModal').modal('show');   
 	});	
 
@@ -59,8 +63,10 @@
 		var elm = $(this);
 		var value = elm.data('value');
 		var id = elm.data('id');
+		$('.loading-menu').show();
 		$.get('<?php echo base_url().'api/registrasi/statusPembayaran/' ?>'+id+'/'+value, function(response) {
 			var data = JSON.parse(response);
+			$('.loading-menu').hide();
 			$('#msg_statusVerif').html(data.msg);
 			$('#msg_statusVerif').fadeIn();
 			setTimeout(function(){ $('#msg_statusVerif').fadeOut() }, 2000);

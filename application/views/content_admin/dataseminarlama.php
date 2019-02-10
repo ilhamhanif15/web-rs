@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    for ($i=0; $i < 300; $i++) { 
+                    for ($i=0; $i < 1; $i++) { 
                     /*foreach($rest->result() as $c)  { */
                   ?>
 

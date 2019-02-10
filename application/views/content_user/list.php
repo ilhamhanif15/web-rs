@@ -8,13 +8,13 @@
 		<div class="col-md-12">
 			<h1 style="border-bottom-style: solid;">List Pendaftar</h1>
 	  		<div class="alert alert-info">
-			  <strong>Info!</strong> Indicates a neutral informative change or action.
+			  <strong>Info!</strong> Gunakan kotak "Pencarian" untuk mencari data anda.
 			</div>
 			<form action="#" method="post">
 			<table id="table-data" class="table table-striped table-bordered" style="width: 100%">
 			    <thead>
 			        <tr>
-			            <th>No.Urut</th>
+			            <th>No. Pendaftaran</th>
 			            <th>Nama</th>
 			            <th>Institusi</th>
 			            <th>Jenis Pembayaran</th>

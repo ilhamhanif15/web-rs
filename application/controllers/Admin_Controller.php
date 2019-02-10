@@ -94,9 +94,13 @@ class Admin_Controller extends CI_Controller {
 		$data['scriptPage'] = 'editPendaftar';
 		$dataCondition = ['id' => $id];
 		$pendaftar = $this->model_registrasi->get($dataCondition);
-		$pendaftar = $pendaftar->result();
-		$data['pendaftar'] = $pendaftar[0];
-		$this->load->view('layout_admin/master',$data);
+		if($pendaftar->num_rows() > 0){
+			$pendaftar = $pendaftar->result();
+			$data['pendaftar'] = $pendaftar[0];
+			$this->load->view('layout_admin/master',$data);
+		}else{
+			redirect('error/notfound');
+		}
 	}
 
 	public function editPendaftarSimpan($id)

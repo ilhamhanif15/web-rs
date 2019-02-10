@@ -32,7 +32,7 @@
 		         <!-- <button class="btn btn-primary" style="width: 100%;" id="btnSimpanEmail"><i class="glyphicon glyphicon-envelope "></i> Simpan lewat email</button> -->
 		         <button class="btn btn-primary" style="width: 100%;" id="btnSaveAsPict" onclick="saveAsPict()"> Klik Disini Untuk Simpan Sebagai Gambar</button>
 		         <hr/>
-		         Jika sudah melakukan pembayaran, bisa melanjutkan ke tahap Konfirmasi Pembayaran untuk meng-upload bukti pembayaran<br/>
+		         Jika sudah melakukan pembayaran, bisa melanjutkan ke tahap Konfirmasi Pembayaran dengan meng-upload bukti pembayaran<br/>
 		         <a href="<?php echo base_url().'verifikasi/'.$id?>">
 		         <button class="btn btn-success" id="btnKonfirmasi" style="width: 100%;">Ke Tahap Konfirmasi Pembayaran<i class="glyphicon glyphicon-menu-right pull-right"></i></button></a>
 	        	</p>

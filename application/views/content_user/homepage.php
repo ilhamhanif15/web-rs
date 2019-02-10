@@ -1,15 +1,73 @@
 <!-- CONTENT -->
-<div id="ubea-hero" class="js-fullheight"  data-section="home" style="padding-top: 82px;">
+<style type="text/css">
+	.flex-next{
+		background: #696969e6;
+		border-radius: 100%;
+	}
+	.flex-prev{
+		background: #696969e6;
+		border-radius: 100%;
+	}
+</style>
+<!-- <div id="ubea-hero" class="js-fullheight"  data-section="home" style="padding-top: 82px;">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-	   	<li style="background-image:  url(<?php echo base_url() ?>assets/images/brosur1.jpg);">
-	   	</li>
-	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur2.jpg);">
-	   	</li>
-	   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur3.jpg);">
-	   	</li>
+		   	<li style="background-image:  url(<?php echo base_url() ?>assets/images/brosur1.jpg);">
+		   	</li>
+		   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur2.jpg);">
+		   	</li>
+		   	<li style="background-image: url(<?php echo base_url() ?>assets/images/brosur3.jpg);">
+		   	</li>
 	  	</ul>
   	</div>
+</div> -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" style="margin-top: 5em;">
+    <div class="item active">
+      <a href="<?php echo base_url() ?>assets/images/brosur1.jpg">
+      	<img src="<?php echo base_url() ?>assets/images/brosur1.jpg" alt="Chania">
+  	  </a>
+      <div class="carousel-caption">
+        <!-- <a href="<?php echo base_url() ?>assets/images/brosur1.jpg">Klik Untuk melihat gambar ukuran penuh</a> -->
+      </div>
+    </div>
+
+    <div class="item">
+	  <a href="<?php echo base_url() ?>assets/images/brosur2.jpg">
+      	<img src="<?php echo base_url() ?>assets/images/brosur2.jpg" alt="Chicago">
+      </a>
+      <div class="carousel-caption">
+      	<!-- <a href="<?php echo base_url() ?>assets/images/brosur2.jpg">Klik Untuk melihat gambar ukuran penuh</a> -->
+      </div>
+    </div>
+
+    <div class="item">
+   	  <a href="<?php echo base_url() ?>assets/images/brosur3.jpg">	
+      	<img src="<?php echo base_url() ?>assets/images/brosur3.jpg" alt="New York">
+      </a>
+      <div class="carousel-caption">
+      	<!-- <a href="<?php echo base_url() ?>assets/images/brosur3.jpg">Klik Untuk melihat gambar ukuran penuh</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 <div class="ubea-section-overflow">
