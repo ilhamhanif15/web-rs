@@ -58,7 +58,7 @@
 		    </div> -->
 
 		</div>
-	  	<div class="col-md-6 offset-md-3 col-sm-12">
+	  	<div class="col-md-6 col-sm-12 col-xs-12">
 	  		<h1 style="border-bottom-style: solid;">Upload Bukti Pembayaran</h1>
 			  <div class="form-group">
 			    <label for="exampleFormControlInput1">Nomor Pendaftaran</label>
